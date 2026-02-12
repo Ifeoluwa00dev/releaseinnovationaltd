@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-6">Location</h4>
             <p className="text-zinc-400">
-              Emmanuel Court, Kunle Asolo Street.<br />
               Metro homes. Lagos Nigeria
             </p>
           </div>
