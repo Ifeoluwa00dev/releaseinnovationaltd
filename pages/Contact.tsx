@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">The Office</h4>
-                  <p className="text-zinc-300">Emmanuel Court, Kunle Asolo Street.<br />Metro homes. Lagos Nigeria</p>
+                  <p className="text-zinc-300">Metro homes. Lagos Nigeria</p>
                 </div>
               </div>
 
