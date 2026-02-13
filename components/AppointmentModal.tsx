@@ -48,7 +48,19 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
             <h2 className="text-3xl font-serif font-bold text-white mb-2">Schedule Strategy Call</h2>
             <p className="text-zinc-400 mb-8 italic">"Growth is not accidental. It is engineered."</p>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={(e) => {
+  handleSubmit(e);
+  // Track form submission
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact');
+  }
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit', {
+      'event_category': 'conversion',
+      'event_label': 'consultation_request'
+    });
+  }
+}} className="space-y-6">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">Full Name</label>
                 <input required type="text" className="w-full bg-zinc-900 border border-zinc-800 focus:border-amber-500 text-white p-3 rounded outline-none transition-colors" />

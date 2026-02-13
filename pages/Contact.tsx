@@ -63,7 +63,19 @@ const Contact: React.FC = () => {
                 <p className="text-zinc-400">Your inquiry has been logged. Akudolu Onyinye will review and contact you shortly.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={(e) => {
+  handleSubmit(e);
+  // Track form submission
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Contact');
+  }
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'form_submit', {
+      'event_category': 'conversion',
+      'event_label': 'consultation_request'
+    });
+  }
+}} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-widest text-amber-500 mb-2">Your Name</label>
