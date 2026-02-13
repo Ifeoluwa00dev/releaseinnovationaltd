@@ -12,7 +12,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="absolute -inset-4 border border-amber-500/20 rounded-lg"></div>
             <img 
-              src="https://picsum.photos/800/1000?grayscale&v=1" 
+              src="https://res.cloudinary.com/drkksaa3i/image/upload/v1770990478/Vanessa_4a23-9b6d-3c5551ada816_ayvdud.jpg" 
               alt="Akudolu Onyinye" 
               className="relative w-full rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
             />
