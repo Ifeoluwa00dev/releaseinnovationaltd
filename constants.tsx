@@ -4,45 +4,44 @@ import { Service, Testimonial, Metric } from './types';
 
 export const BRAND_NAME = "Release Innovations LTD";
 
+export const PAIN_POINTS = [
+  "Inconsistent Pricing Structures",
+  "Lack of SKU Clarity & Inventory Intelligence",
+  "Weak Retail & Physical Market Penetration",
+  "Over-reliance on Volatile Instagram Algorithms",
+  "Undefined Distributor & Reseller Strategies",
+  "No Scalable Growth Roadmap"
+];
+
 export const SERVICES: Service[] = [
   {
     id: 1,
-    title: "Tradefair & Market Expansion Strategy",
-    description: "Aligning physical markets with strategic growth trajectories.",
+    title: "Distribution Intelligence",
+    description: "Moving your brand from DMs to the shelves of major retailers and national distributors.",
     points: [
-      "Distributor, reseller, and stall alignment",
-      "Market entry planning and state-level rollout",
-      "Incentive structures that drive repeat orders"
+      "Retail-ready pricing & margins architecture",
+      "Distributor tiering and incentive modeling",
+      "National tradefair & market rollout strategy"
     ]
   },
   {
     id: 2,
-    title: "Brand Positioning & Clarity",
-    description: "Elevating your brand perception in the digital and physical space.",
+    title: "Market Architecture",
+    description: "Engineering the systems that separate the founder's hustle from the brand's machine.",
     points: [
-      "Instagram and digital architecture for premium brand perception",
-      "Separation of founder, product, and other brand channels",
-      "Content strategy that converts and builds trust"
+      "SKU optimization and portfolio management",
+      "Digital-to-Retail conversion funnels",
+      "Operational oversight for beauty founders"
     ]
   },
   {
     id: 3,
-    title: "Revenue Protection & Growth Oversight",
-    description: "Systems designed to ensure every visibility translates to revenue.",
+    title: "Growth Strategy Oversight",
+    description: "High-level advisory for brands ready to dominate the Nigerian and West African market.",
     points: [
-      "Aligning digital campaigns with physical market activity",
-      "KPIs, ROI tracking, and impact measurement",
-      "Execution oversight without micromanaging teams"
-    ]
-  },
-  {
-    id: 4,
-    title: "E-commerce & Digital Architecture",
-    description: "Seamless user experiences built for conversion and retention.",
-    points: [
-      "Custom website and UX design for conversions",
-      "Influencer & customer integration for engagement",
-      "Mobile-first optimization and seamless checkout experience"
+      "Brand equity and premium positioning",
+      "Revenue protection and leak auditing",
+      "Influencer-to-Retail impact measurement"
     ]
   }
 ];
@@ -50,41 +49,41 @@ export const SERVICES: Service[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    quote: "Onyi’s Tradefair strategies transformed our distribution. Within months, our product visibility increased, reseller adoption grew, and revenue became predictable across multiple states.",
-    author: "Brand Founder",
-    role: "Confidential Client"
+    quote: "Onyinye didn't just give us a plan; she gave us a machine. We moved from 100% Instagram sales to a structured network of 12 regional distributors in 4 months.",
+    author: "Founder, Skincare Brand",
+    role: "Growth Client"
   },
   {
     id: 2,
-    quote: "She helped us align our digital campaigns with physical sales. Our online conversions improved significantly while our brand maintained a premium perception.",
-    author: "Beauty Brand",
-    role: "Confidential Client"
+    quote: "The SKU clarity alone saved us millions in wasted inventory. If you are serious about moving from hustle to legacy, this is the only call you need to make.",
+    author: "CEO, Cosmetic House",
+    role: "Strategy Client"
   }
 ];
 
 export const METRICS: Metric[] = [
   {
     id: 1,
-    label: "Distributor Growth",
-    value: "50–200%",
-    description: "Increase in product movement after structured strategy"
+    label: "Sales Shift",
+    value: "80%",
+    description: "Migration from manual DM sales to automated distribution"
   },
   {
     id: 2,
-    label: "Brand Authority",
-    value: "Premium",
-    description: "Unified messaging created elite market perception"
+    label: "SKU Efficiency",
+    value: "100%",
+    description: "Precision inventory tracking and high-margin focus"
   },
   {
     id: 3,
-    label: "Market Reach",
+    label: "Market Depth",
     value: "National",
-    description: "Successful rollout across multiple states & beauty fairs"
+    description: "Retail presence across key Nigerian beauty hubs"
   },
   {
     id: 4,
-    label: "Engagement",
-    value: "High-ROI",
-    description: "Optimized e-commerce & influencer integration"
+    label: "Client Value",
+    value: "High-Tier",
+    description: "Reserved for founders focused on scalable legacy"
   }
 ];

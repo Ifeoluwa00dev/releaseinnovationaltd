@@ -14,7 +14,7 @@ const About: React.FC = () => {
             <img 
               src="https://res.cloudinary.com/drkksaa3i/image/upload/v1770990478/Vanessa_4a23-9b6d-3c5551ada816_ayvdud.jpg" 
               alt="Akudolu Onyinye" 
-              className="relative w-full rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
+              className="relative w-full rounded-lg shadow-2xl  transition-all duration-700"
             />
             <div className="absolute bottom-6 right-6 glass-effect p-6 rounded border border-amber-500/40 max-w-xs">
               <p className="gold-text font-serif italic text-lg mb-2">"Growth is not about doing more. It is about building systems strong enough to carry more."</p>
@@ -23,13 +23,25 @@ const About: React.FC = () => {
 
           <div className="space-y-10">
             <div>
-              <h3 className="text-3xl font-serif font-bold text-white mb-6 underline underline-offset-8 decoration-amber-500/30">Executive Bio</h3>
+              <h3 className="text-xs font-bold uppercase tracking-[0.4em] text-amber-500 mb-6">Professional Identity</h3>
+              <h4 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8">Market Strategist. <br/>Growth Architect.</h4>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
                 As the founder of <span className="text-white font-medium">Release Innovations Ltd</span>, I partner with founders and premium brands to align digital and physical growth channels.
               </p>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
                 With over six years operating on the ground in Tradefair distribution, reseller networks, and market expansion, I help brands strengthen revenue, optimize market reach, and scale with authority rather than chaos.
               </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div className="border-l border-amber-500/30 pl-6 py-2">
+                 <h5 className="text-white font-bold text-sm uppercase tracking-widest mb-2">The Mission</h5>
+                 <p className="text-zinc-500 text-sm">To de-risk Nigerian beauty brands by building systems that outlive the founder's daily input.</p>
+               </div>
+               <div className="border-l border-amber-500/30 pl-6 py-2">
+                 <h5 className="text-white font-bold text-sm uppercase tracking-widest mb-2">The Method</h5>
+                 <p className="text-zinc-500 text-sm">Hard data, SKU intelligence, and aggressive retail penetration strategies.</p>
+               </div>
             </div>
 
             <div className="bg-zinc-900/50 p-8 rounded-xl border border-amber-500/10">
@@ -58,7 +70,11 @@ const About: React.FC = () => {
               </ul>
             </div>
 
-            <div>
+            
+          </div>
+          
+        </div>
+        <div className= "mt-32 item-center">
               <h3 className="text-3xl font-serif font-bold text-white mb-6">Our Philosophy</h3>
               <div className="space-y-4 text-zinc-400 border-l-2 border-amber-500/40 pl-6">
                 <p>As brands evolve, so must their structure. The systems that once supported growth may no longer be sufficient for expansion, authority, or premium positioning.</p>
@@ -67,9 +83,8 @@ const About: React.FC = () => {
                 <p className="text-white font-serif italic">This is the work I do.</p>
               </div>
             </div>
-          </div>
-        </div>
       </div>
+      
     </div>
   );
 };
