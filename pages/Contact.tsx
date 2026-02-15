@@ -249,7 +249,7 @@ const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Budget Range for Strategic consulting (NGN)</label>
-                      <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                      <select name="budget_range" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
                         <option>Under 30M</option>
                         <option>30M - 50M</option>
                         <option>50M - 100M</option>
@@ -259,7 +259,7 @@ const Contact: React.FC = () => {
 
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">What are you current sales channels ?</label>
-                      <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                      <select name="sales_channels" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
                         <option>Instagram only</option>
                         <option>Websites</option>
                         <option>Retails Stores</option>

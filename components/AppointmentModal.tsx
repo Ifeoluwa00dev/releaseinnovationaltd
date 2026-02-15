@@ -62,7 +62,8 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
       <div className="relative w-full max-w-lg glass-effect p-8 rounded-xl border border-amber-500/30">
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-zinc-400 hover:text-amber-500"
+          className="absolute top-4 right-4 z-10 text-zinc-400 hover:text-amber-500 transition-colors p-2 -m-2"
+          aria-label="Close modal"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -101,10 +102,10 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                     name="revenue" 
                     className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
                   >
-                    <option>Under 500k</option>
-                    <option>500k - 2M</option>
-                    <option>2M - 5M</option>
-                    <option>5M+</option>
+                    <option>Under 5M</option>
+                    <option>5M- 10M</option>
+                    <option>10M - 50M</option>
+                    <option>50M+</option>
                   </select>
                 </div>
               </div>
