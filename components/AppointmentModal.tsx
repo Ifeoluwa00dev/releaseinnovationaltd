@@ -59,7 +59,8 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
       <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose}></div>
-      <div className="relative w-full max-w-lg glass-effect p-8 rounded-xl border border-amber-500/30">
+      <div className="relative w-full max-w-lg glass-effect rounded-xl border border-amber-500/30 overflow-visible">
+
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 z-10 text-zinc-400 hover:text-amber-500 transition-colors p-2 -m-2"
