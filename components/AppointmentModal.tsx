@@ -1,5 +1,13 @@
-
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+
+// Type declarations for analytics
+declare global {
+  interface Window {
+    fbq?: any;
+    gtag?: any;
+  }
+}
 
 interface AppointmentModalProps {
   isOpen: boolean;
@@ -11,45 +19,41 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      onClose();
-      setSubmitted(false);
-    }, 2000);
 
+    // Send email via EmailJS
     emailjs.sendForm(
-    'service_pfjqfqd',  // Replace with YOUR Service ID
-    'template_aoeof4c', // Replace with YOUR Template ID
-    e.currentTarget,
-    'ezMGR7P7mJlhZRBQ1'   // Replace with YOUR Public Key
-  )
-  .then((result) => {
-    console.log('Email sent successfully:', result.text);
-    
-    // Track conversion
-    if (typeof fbq !== 'undefined') {
-      fbq('track', 'Contact');
-    }
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
-        'event_category': 'conversion',
-        'event_label': 'consultation_request'
-      });
-    }
-    
-    // Show success message
-    setIsSent(true);
-    setTimeout(() => {
-      setIsSent(false);
-      onClose?.(); // Close modal if exists
-    }, 3000);
-  })
-  .catch((error) => {
-    console.error('Email send failed:', error);
-    alert('Failed to send message. Please try again or email directly.');
-  });
+      'service_pfjqfqd',  // Replace with YOUR Service ID
+      'template_aoeof4c', // Replace with YOUR Template ID
+      e.currentTarget,
+      'ezMGR7P7mJlhZRBQ1'   // Replace with YOUR Public Key
+    )
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
+      
+      // Track conversion
+      if (typeof window.fbq !== 'undefined') {
+        window.fbq('track', 'Contact');
+      }
+      if (typeof window.gtag !== 'undefined') {
+        window.gtag('event', 'form_submit', {
+          'event_category': 'conversion',
+          'event_label': 'consultation_request'
+        });
+      }
+      
+      // Show success message
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3000);
+    })
+    .catch((error) => {
+      console.error('Email send failed:', error);
+      alert('Failed to send message. Please try again or email directly.');
+    });
   };
 
   return (
@@ -80,28 +84,23 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
             <h2 className="text-3xl font-serif font-bold text-white mb-2">Schedule Strategy Call</h2>
             <p className="text-zinc-400 mb-8 italic">"Growth is not accidental. It is engineered."</p>
             
-            <form onSubmit={(e) => {
-  handleSubmit(e);
-  // Track form submission
-  if (typeof fbq !== 'undefined') {
-    fbq('track', 'Contact');
-  }
-  if (typeof gtag !== 'undefined') {
-    gtag('event', 'form_submit', {
-      'event_category': 'conversion',
-      'event_label': 'consultation_request'
-    });
-  }
-}} className="space-y-6">
-              
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Brand Name</label>
-                  <input required type="text"  name="brand_name" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                  <input 
+                    required 
+                    type="text"  
+                    name="brand_name" 
+                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" 
+                  />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Monthly Revenue (NGN)</label>
-                  <select name="revenue" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all">
+                  <select 
+                    name="revenue" 
+                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
+                  >
                     <option>Under 500k</option>
                     <option>500k - 2M</option>
                     <option>2M - 5M</option>
@@ -109,31 +108,56 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                   </select>
                 </div>
               </div>
+
               <div>
                 <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Primary Growth Challenge</label>
-                <textarea required rows={2} name="growth_challenge" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" placeholder="e.g. Scaling physical distribution"></textarea>
+                <textarea 
+                  required 
+                  rows={2} 
+                  name="growth_challenge" 
+                  className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" 
+                  placeholder="e.g. Scaling physical distribution"
+                />
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">What do you want help with?</label>
-                <textarea required rows={2} name="specific_goal" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" placeholder="Specific objectives..."></textarea>
+                <textarea 
+                  required 
+                  rows={2} 
+                  name="specific_goal" 
+                  className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" 
+                  placeholder="Specific objectives..."
+                />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Full Name</label>
-                  <input required type="text" name="from_name" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                  <input 
+                    required 
+                    type="text" 
+                    name="from_name" 
+                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" 
+                  />
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Official Email</label>
-                  <input required type="email" name="from_email" className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                  <input 
+                    required 
+                    type="email" 
+                    name="from_email" 
+                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" 
+                  />
                 </div>
               </div>
+
               <input 
-    type="hidden" 
-    name="submit_date" 
-    value={new Date().toLocaleString()} 
-  />
+                type="hidden" 
+                name="submit_date" 
+                value={new Date().toLocaleString()} 
+              />
+
               <button 
                 type="submit"
                 className="w-full py-4 gold-bg text-black font-bold uppercase tracking-widest rounded mt-6 hover:brightness-110 active:scale-[0.98] transition-all"
