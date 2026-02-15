@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import SectionHeading from '../components/SectionHeading';
 import { BRAND_NAME } from '../constants';
 import emailjs from '@emailjs/browser'
@@ -55,9 +56,9 @@ const Contact: React.FC = () => {
             <div className="inline-block px-4 py-1 border border-amber-500/30 rounded-full mb-8">
               <span className="text-[10px] font-bold uppercase tracking-[0.4em] gold-text">Selection Criteria</span>
             </div>
-            <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">I Am Not Available <br/><span className="text-zinc-600">For Everyone.</span></h3>
+            <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">Our mission is simple <br/><span className="text-zinc-600">We turn beauty brands into retail powerhouses.</span></h3>
             <p className="text-zinc-400 text-xl mb-12 font-light leading-relaxed">
-              I partner exclusively with founders who have moved past the "testing" phase and are ready for professional, aggressive market scaling.
+              We are selective because structured growth requires a specific mindset. We work with founders who are playing the long game.
             </p>
 
             <div className="space-y-12">
@@ -65,8 +66,8 @@ const Contact: React.FC = () => {
                <div className="flex items-start space-x-6">
                 <div className="mt-1 w-2 h-2 gold-bg rounded-full flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-2">The Minimum Entry</h4>
-                  <p className="text-zinc-500 leading-relaxed">We require brands to have an existing product line and a clear vision for national retail presence.</p>
+                  <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-2">The Requirements</h4>
+                  <p className="text-zinc-500 leading-relaxed">We partner with beauty founders ready to move past the startup phase and into the global market. Serious growth</p>
                 </div>
                </div>
               <div className="flex items-start space-x-6">
@@ -79,36 +80,86 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
+                  
               <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 flex-shrink-0" >
-                  <svg 
-  className="w-6 h-6" 
-  fill="none" 
-  stroke="currentColor" 
-  strokeWidth="2" 
-  strokeLinecap="round" 
-  strokeLinejoin="round" 
-  viewBox="0 0 24 24"
->
-  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">Instagram</h4>
-                  <p className="text-zinc-300">releaseinnovations</p>
-                </div>
+                
+                <div className="space-y-8">
+
+      {/* Instagram */}
+      <a
+        href="https://instagram.com/releaseinnovations"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-start space-x-6 group"
+      >
+        <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 group-hover:bg-amber-500/10 transition">
+          <Instagram className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
+            Instagram
+          </h4>
+          <p className="text-zinc-300">releaseinnovations</p>
+        </div>
+      </a>
+
+      {/* Email */}
+      <a
+        href="mailto:releaseinnovationsltd@gmail.com"
+        className="flex items-start space-x-6 group"
+      >
+        <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 group-hover:bg-amber-500/10 transition">
+          <Mail className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
+            Direct Inquiries
+          </h4>
+          <p className="text-zinc-300">releaseinnovationsltd@gmail.com</p>
+        </div>
+      </a>
+
+      {/* WhatsApp (phone) */}
+      <a
+        href="https://wa.me/2349120264481"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-start space-x-6 group"
+      >
+        <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 group-hover:bg-amber-500/10 transition">
+          <Phone className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
+            WhatsApp
+          </h4>
+          <p className="text-zinc-300">+234 912 026 4481</p>
+        </div>
+      </a>
+
+      {/* LinkedIn */}
+      <a
+        href="https://linkedin.com/company/release-innovations"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-start space-x-6 group"
+      >
+        <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 group-hover:bg-amber-500/10 transition">
+          <Linkedin className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
+            LinkedIn
+          </h4>
+          <p className="text-zinc-300">Release Innovations</p>
+        </div>
+      </a>
+
+    </div>
+                
               </div>
 
-              <div className="flex items-start space-x-6">
-                <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 flex-shrink-0">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">Direct Inquiries</h4>
-                  <p className="text-zinc-300">Onyivanny17@gmail.com</p>
-                  <p className="text-zinc-300">08162033604</p>
-                </div>
-              </div>
+              
             </div>
           </div>
 
@@ -147,11 +198,11 @@ const Contact: React.FC = () => {
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Monthly Revenue (NGN)</label>
                       <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
-                        <option>Under 500k</option>
-                        <option>500k - 2M</option>
-                        <option>2M - 5M</option>
-                        <option>5M - 20M</option>
-                        <option>20M+</option>
+                        <option>Under 5m</option>
+                        <option>5M - 10M</option>
+                        <option>10M - 20M</option>
+                        <option>20M - 50M</option>
+                        <option>50M+</option>
                       </select>
                     </div>
                   </div>
@@ -179,6 +230,46 @@ const Contact: React.FC = () => {
                       placeholder="What exactly do you want to build?"
                     ></textarea>
                   </div>
+
+                  <div>
+                    <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Why do you believe your brand is ready for structured growth ?</label>
+                    <textarea 
+                      required
+                      name="why_your_brand_should_grow"
+                      rows={3}
+                       
+                      className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
+                      placeholder=""
+                    ></textarea>
+                  </div>
+                  </div>
+
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Budget Range for Strategic consulting (NGN)</label>
+                      <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                        <option>Under 30M</option>
+                        <option>30M - 50M</option>
+                        <option>50M - 100M</option>
+                        <option>100M+</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">What are you current sales channels ?</label>
+                      <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                        <option>Instagram only</option>
+                        <option>Websites</option>
+                        <option>Retails Stores</option>
+                        <option> Distributors</option>
+                        <option>Export</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Your Full Name</label>

@@ -80,7 +80,7 @@ const About: React.FC = () => {
                 <p>As brands evolve, so must their structure. The systems that once supported growth may no longer be sufficient for expansion, authority, or premium positioning.</p>
                 <p> At a certain level, refinement becomes essential - not because a brand is weak, but because it is ready for more intentional standard of operation</p>
                 <p>Strategic alignment between distribution, digital infrastructure, pricing intelligence, and market expansion ensures that growth remains sustainable and brand value remains protected.</p>
-                <p className="text-white font-serif italic">This is the work I do.</p>
+                <p className="text-white font-serif italic">This is the work We do.</p>
               </div>
             </div>
       </div>

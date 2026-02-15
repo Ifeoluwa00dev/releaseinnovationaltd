@@ -22,8 +22,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-6">Inquiries</h4>
             <p className="text-zinc-400">
-              <span className="block mb-2">Phone: 08162033604</span>
-              <span>Email: Onyivanny17@gmail.com</span>
+              <a href="https://wa.me/2349120264481" rel="noopener noreferrer">
+              <span className="block mb-2">  WhatsApp : +234 912 026 4481</span> 
+              </a>
+              <a href="mailto:releaseinnovationsltd@gmail.com" rel="noopener noreferrer">
+              <span>Email: Releaseinnovationsltd@gmail.com</span>
+              </a>
             </p>
           </div>
         </div>

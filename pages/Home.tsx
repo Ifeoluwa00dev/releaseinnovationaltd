@@ -26,15 +26,17 @@ const Home: React.FC = () => {
             Scaling Nigerian Beauty From <span className="gold-text italic underline decoration-amber-500/30">Instagram Hustle</span> To Retail Powerhouses.
           </h1>
           <p className="text-xl md:text-2xl text-zinc-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            I help beauty founders move from erratic social media sales to structured, scalable distribution systems.
+            We help beauty founders move from erratic social media sales to structured, scalable distribution systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link to="/contact" className="px-12 py-5 gold-bg text-black font-bold uppercase tracking-widest text-sm rounded shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:scale-105 transition-all">
-              Apply for Strategic Review
-            </Link>
-            <Link to="/services" className="px-12 py-5 border border-amber-500/30 text-white font-bold uppercase tracking-widest text-sm rounded hover:bg-amber-500/10 transition-all">
+
+            <Link to="/services" className="px-12 py-5 gold-bg text-black font-bold uppercase tracking-widest text-sm rounded shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:scale-105 transition-all">
               The Architecture
             </Link>
+            <Link to="/contact" className="px-12 py-5 border border-amber-500/30 text-white font-bold uppercase tracking-widest text-sm rounded hover:bg-amber-500/10 transition-all">
+              Apply for Strategic Review
+            </Link>
+            
           </div>
         </div>
       </section>
@@ -76,7 +78,7 @@ const Home: React.FC = () => {
       <section className="py-24 bg-black">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-2xl md:text-4xl font-serif font-light text-zinc-300 leading-relaxed italic">
-            "I don’t consult to 'help' — I engineer the systems that make your growth predictable and your market dominance inevitable."
+            "We don’t consult to 'help' — We engineer the systems that make your growth predictable and your market dominance inevitable."
           </p>
           <div className="mt-10">
             <p className="font-bold uppercase tracking-[0.3em] gold-text text-lg">Akudolu Onyinye</p>
