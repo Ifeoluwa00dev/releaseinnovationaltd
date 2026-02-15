@@ -58,7 +58,21 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: "The SKU clarity alone saved us millions in wasted inventory. If you are serious about moving from hustle to legacy, this is the only call you need to make.",
     author: "CEO, Cosmetic House",
     role: "Strategy Client"
-  }
+  },
+  {
+    id: 3,
+    quote: "I thought I didn't need a digital strategist because I had visibility and steady sales. Meeting Onyi showed me the gaps in my digital structure that were costing me revenue",
+    author: "Beauty Brand Founder",
+    role: "Digital Impact Client"
+  },
+  {
+    id: 4,
+    quote: "After implementing her framework, my website improved, my campaigns became measurable and my brand finally aligned online.",
+    author: "CEO, Cosmetic House",
+    role: "Digital Impact Client "
+  },
+
+  
 ];
 
 export const METRICS: Metric[] = [

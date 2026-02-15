@@ -41,7 +41,7 @@ const Services: React.FC = () => {
 
         <div className="mt-32 p-16 glass-effect rounded-3xl border border-amber-500/20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-1 h-full gold-bg"></div>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Who I Work With</h2>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Who We Work With</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-zinc-400">
             <div className="p-6 border border-zinc-800 rounded-lg">
               <h4 className="gold-text font-bold mb-3 uppercase tracking-widest text-xs">New Entrants</h4>
