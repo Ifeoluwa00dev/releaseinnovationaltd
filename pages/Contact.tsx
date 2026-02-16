@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
 
       {/* WhatsApp (phone) */}
       <a
-        href="https://wa.me/2349120264481"
+        href="https://wa.link/dwvzlt"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-start space-x-6 group"
