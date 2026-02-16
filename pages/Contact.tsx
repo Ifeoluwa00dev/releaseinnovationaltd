@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
 
       {/* Instagram */}
       <a
-        href="https://instagram.com/releaseinnovations"
+        href="https://instagram.com/releaseinnovations?igsh=MWs5czR0aTh5c2Ftag%3D%3D&ytm_source=qr"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-start space-x-6 group"

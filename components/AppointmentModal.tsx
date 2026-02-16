@@ -26,7 +26,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     emailjs
       .sendForm(
         "service_pfjqfqd",
-        "template_aoeof4c",
+        "template_dsnfx63",
         e.currentTarget,
         "ezMGR7P7mJlhZRBQ1"
       )
