@@ -23,7 +23,7 @@ const Navbar: React.FC<{ onSchedule: () => void }> = ({ onSchedule }) => {
           <div className="flex-shrink-0 flex flex-col">
             <Link to="/" className="text-xl sm:text-2xl font-serif font-bold tracking-wider gold-text">
               <img src={logo} alt="Release Innovations LTD"
-              className="w-24 md:w-32 lg:w-48 h-auto" />
+              className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto" />
             </Link>
           </div>
 
