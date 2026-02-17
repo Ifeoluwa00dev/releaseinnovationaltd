@@ -1,112 +1,198 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { BRAND_NAME } from '../constants';
-import { Instagram, Linkedin, Twitter } from 'lucide-react';
 
-const socials = [
-  {
-    name: 'Instagram',
-    url: 'https://instagram.com/yourusername',
-    icon: Instagram
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://linkedin.com/company/yourcompany',
-    icon: Linkedin
-  },
-  // {
-  //   name: 'Twitter',
-  //   url: 'https://twitter.com/yourusername',
-  //   icon: Twitter
-  // }
-];
+const C = {
+  navy:    '#0a192f',
+  forest:  '#1a392a',
+  gold:    '#c5a059',
+  goldLight: '#dcc18d',
+  ivory:   '#fdfaf6',
+};
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-zinc-950 border-t border-amber-500/10 pt-16 pb-8">
+    <footer
+      className="pt-16 pb-8 border-t"
+      style={{ backgroundColor: C.navy, borderTopColor: 'rgba(197,160,89,0.20)' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
+        {/* Top grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold gold-text mb-4">
+            <h3
+              className="text-2xl font-bold mb-4 tracking-wider"
+              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
+            >
               {BRAND_NAME}
             </h3>
-            <p className="text-zinc-400 leading-relaxed mb-6">
-              Transitioning business owners from outdated structures into elevated, scalable business models.
+            <p
+              className="text-sm leading-relaxed mb-6"
+              style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              We build the systems that make selling predictable, measurable, and scalable.
+              Elevating beauty brands into high-authority market leaders.
             </p>
-          </div>
 
-          {/* Location */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-6">
-              Location
-            </h4>
-            <p className="text-zinc-400">
-              Metro homes, Kunle Asolo street, Before Lagos Business School, Lagos Nigeria.
-            </p>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-6">
-              Inquiries
-            </h4>
-            <p className="text-zinc-400 space-y-2">
+            {/* Social icons */}
+            <div className="flex space-x-3">
               <a
-                href="https://wa.me/2349120264481"
+                href="https://instagram.com/releaseinnovations?igsh=MWs5czR0aTh5c2Ftag%3D%3D&ytm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-amber-400"
+                aria-label="Instagram"
+                className="p-2 rounded-full transition-colors duration-300"
+                style={{ backgroundColor: C.forest }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.forest; }}
               >
-                WhatsApp: +234 912 026 4481
+                <Instagram size={18} style={{ color: C.ivory }} />
               </a>
-
               <a
-                href="mailto:releaseinnovationsltd@gmail.com"
-                className="block hover:text-amber-400"
+                href="https://linkedin.com/company/release-innovations"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="p-2 rounded-full transition-colors duration-300"
+                style={{ backgroundColor: C.forest }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.forest; }}
               >
-                Email: releaseinnovationsltd@gmail.com
+                <Linkedin size={18} style={{ color: C.ivory }} />
               </a>
-            </p>
-          </div>
-
-          {/* Socials */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-6">
-              Contact Us
-            </h4>
-            <div className="flex space-x-4">
-              {socials.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full border border-amber-500/20 text-zinc-400 hover:text-amber-500 hover:border-amber-500 transition-all"
-                    aria-label={social.name}
-                  >
-                    <Icon size={20} />
-                  </a>
-                );
-              })}
             </div>
           </div>
 
+          {/* Contact details */}
+          <div>
+            <h4
+              className="text-sm font-bold uppercase tracking-[0.2em] mb-6"
+              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Contact Intelligence
+            </h4>
+            <ul className="space-y-4">
+              <li className="flex items-start space-x-3 text-sm"
+                style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}>
+                <MapPin size={16} className="flex-shrink-0 mt-0.5" style={{ color: C.gold }} />
+                <span>Metro homes, Kunle Asolo street, Before Lagos Business School, Lagos Nigeria.</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm"
+                style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}>
+                <Phone size={16} className="flex-shrink-0" style={{ color: C.gold }} />
+                <a
+                  href="https://wa.me/2349120264481"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors"
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.goldLight; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(253,250,246,0.55)'; }}
+                >
+                  +234 912 026 4481 &nbsp;/&nbsp; +234 816 203 3604
+                </a>
+              </li>
+              <li className="flex items-center space-x-3 text-sm"
+                style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}>
+                <Mail size={16} className="flex-shrink-0" style={{ color: C.gold }} />
+                <a
+                  href="mailto:releaseinnovationsltd@gmail.com"
+                  className="transition-colors"
+                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.goldLight; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(253,250,246,0.55)'; }}
+                >
+                  releaseinnovationsltd@gmail.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Core focus */}
+          <div>
+            <h4
+              className="text-sm font-bold uppercase tracking-[0.2em] mb-6"
+              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Core Focus
+            </h4>
+            <ul
+              className="space-y-2 text-sm"
+              style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {[
+                'Market Expansion Strategy',
+                'Distribution Architecture',
+                'SKU Profit Optimisation',
+                'Digital Infrastructure',
+                'Premium Positioning',
+                'Revenue Protection',
+              ].map((item, i) => (
+                <li key={i} className="flex items-center space-x-2">
+                  <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: C.gold }} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick links */}
+          <div>
+            <h4
+              className="text-sm font-bold uppercase tracking-[0.2em] mb-6"
+              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Navigate
+            </h4>
+            <ul className="space-y-3">
+              {[
+                { label: 'Home',     path: '/' },
+                { label: 'About',    path: '/about' },
+                { label: 'Services', path: '/services' },
+                { label: 'Contact',  path: '/contact' },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.path}
+                    className="text-sm transition-colors"
+                    style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
+                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.goldLight; }}
+                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(253,250,246,0.55)'; }}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-amber-500/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest text-zinc-500 uppercase">
-          <p>© {new Date().getFullYear()} {BRAND_NAME}. All rights reserved.</p>
+        <div
+          className="pt-8 flex flex-col md:flex-row justify-between items-center"
+          style={{ borderTop: '1px solid rgba(197,160,89,0.10)' }}
+        >
+          <p
+            className="text-[10px] uppercase tracking-[0.3em]"
+            style={{ color: 'rgba(253,250,246,0.30)', fontFamily: 'Montserrat, sans-serif' }}
+          >
+            &copy; {new Date().getFullYear()} {BRAND_NAME}. Engineered for Excellence.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-amber-500 transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-amber-500 transition-colors">
-              Terms
-            </a>
+            {['Privacy', 'Terms'].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-[10px] uppercase tracking-widest transition-colors"
+                style={{ color: 'rgba(253,250,246,0.30)', fontFamily: 'Montserrat, sans-serif' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.gold; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(253,250,246,0.30)'; }}
+              >
+                {item}
+              </a>
+            ))}
           </div>
         </div>
 

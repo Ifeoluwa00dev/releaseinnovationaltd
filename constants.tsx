@@ -104,15 +104,15 @@ export const METRICS: Metric[] = [
 
 export const TEAM_MEMBERS = [
   {
-    name: "Sarah John",
-    role: "Operations Lead",
+    name: "Olalekan Olohunloba",
+    role: "Senior Digital Marketer",
     image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80",
-    description: "Sarah makes sure all client systems run smoothly every day."
+    description: "Driving digital strategies and campaigns that elevate brand presence and growth."
   },
   {
-    name: "David Obi",
-    role: "Retail Coordinator",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
-    description: "David manages the connections between our brands and major shops."
+    name: "Ifeoluwa Joshua",
+    role: "Web Designer",
+    image: "https://res.cloudinary.com/drkksaa3i/image/upload/v1771333812/Ifeoluwa_img_ahkwst.png",
+    description: "Crafting seamless, visually striking websites that align with business goals"
   }
 ];
