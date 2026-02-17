@@ -49,17 +49,11 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-32 pb-24 px-4 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading title="Strategic Engagement" subtitle="Earned Access" />
+        
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
           <div>
-            <div className="inline-block px-4 py-1 border border-amber-500/30 rounded-full mb-8">
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] gold-text">Selection Criteria</span>
-            </div>
-            <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">Our mission is simple <br/><span className="text-zinc-600">We turn beauty brands into retail powerhouses.</span></h3>
-            <p className="text-zinc-400 text-xl mb-12 font-light leading-relaxed">
-              We are selective because structured growth requires a specific mindset. We work with founders who are playing the long game.
-            </p>
+            
 
             <div className="space-y-12">
 
@@ -67,7 +61,7 @@ const Contact: React.FC = () => {
                 <div className="mt-1 w-2 h-2 gold-bg rounded-full flex-shrink-0"></div>
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest gold-text mb-2">The Requirements</h4>
-                  <p className="text-zinc-500 leading-relaxed">We partner with beauty founders ready to move past the startup phase and into the global market. Serious growth</p>
+                  <p className="text-zinc-500 leading-relaxed">We are selective because structured growth requires a specific mindset. We work with founders who are playing the long game.</p>
                 </div>
                </div>
               <div className="flex items-start space-x-6">
@@ -113,7 +107,7 @@ const Contact: React.FC = () => {
         </div>
         <div>
           <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
-            Direct Inquiries
+            Email
           </h4>
           <p className="text-zinc-300">releaseinnovationsltd@gmail.com</p>
         </div>

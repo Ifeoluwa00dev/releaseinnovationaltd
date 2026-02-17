@@ -136,9 +136,7 @@ const Home: React.FC = () => {
             Access Is Limited. <br/><span className="text-zinc-500">Excellence Is Required.</span>
           </h2>
           <p className="text-zinc-400 mb-12 text-lg">I only work with founders who are ready to transition from hustle to a legacy business model.</p>
-          <Link to="/contact" className="inline-block px-12 py-5 gold-bg text-black font-bold uppercase tracking-[0.2em] text-sm rounded-full hover:brightness-110 shadow-2xl transition-all">
-            Request Growth Assessment
-          </Link>
+      
         </div>
       </section>
     </div>
