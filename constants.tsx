@@ -106,7 +106,7 @@ export const TEAM_MEMBERS = [
   {
     name: "Olalekan Olohunloba",
     role: "Senior Digital Marketer",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80",
+    image: "https://res.cloudinary.com/drkksaa3i/image/upload/v1771337787/gyg025_qopq4x.jpg",
     description: "Driving digital strategies and campaigns that elevate brand presence and growth."
   },
   {
