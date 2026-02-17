@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Instagram, Mail, Phone, Linkedin } from "lucide-react";
+import { Instagram, Mail, Phone, Linkedin, PhoneIcon} from "lucide-react";
 import SectionHeading from '../components/SectionHeading';
 import { BRAND_NAME } from '../constants';
 import emailjs from '@emailjs/browser'
@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">The Office</h4>
-                  <p className="text-zinc-300">Metro homes. Lagos Nigeria</p>
+                  <p className="text-zinc-300"> Metro homes, Kunle Asolo street, Before Lagos Business School, Lagos Nigeria</p>
                 </div>
               </div>
 
@@ -96,6 +96,21 @@ const Contact: React.FC = () => {
           <p className="text-zinc-300">releaseinnovations</p>
         </div>
       </a>
+
+      <div className="flex items-start space-x-6 group">
+
+        <div className="w-12 h-12 gold-border border-2 flex items-center justify-center rounded-full text-amber-500 group-hover:bg-amber-500/10 transition">
+          <PhoneIcon className="w-6 h-6" />
+        </div>
+        <div>
+          <h4 className="text-xs font-bold uppercase tracking-widest gold-text mb-2">
+            Phone
+          </h4>
+          <p className="text-zinc-300"> +234 912 026 4481</p>
+          <p className="text-zinc-300"> +234 816 203 3604</p>
+        </div>
+
+      </div>
 
       {/* Email */}
       <a
@@ -275,11 +290,11 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                 {/* Hidden field for submission date */}
-  <input 
-    type="hidden" 
+               <input 
+                 type="hidden" 
     name="submit_date" 
-    value={new Date().toLocaleString()} 
-  />
+                 value={new Date().toLocaleString()} 
+                   />
                 <button 
                   type="submit"
                   className="w-full py-5 gold-bg text-black font-bold uppercase tracking-widest text-lg rounded hover:brightness-110 active:scale-[0.98] transition-all shadow-xl"

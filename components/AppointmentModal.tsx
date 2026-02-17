@@ -26,7 +26,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     emailjs
       .sendForm(
         "service_pfjqfqd",
-        "template_dsnfx63",
+        "template_aoeof4c",
         e.currentTarget,
         "ezMGR7P7mJlhZRBQ1"
       )
@@ -95,95 +95,106 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Brand Name</label>
+                      <input required type="text" name="brand_name" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Monthly Revenue (NGN)</label>
+                      <select name="revenue" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                        <option>Under 5m</option>
+                        <option>5M - 10M</option>
+                        <option>10M - 20M</option>
+                        <option>20M - 50M</option>
+                        <option>50M+</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                      Brand Name
-                    </label>
-                    <input
+                    <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Main Growth Challenge</label>
+                    <textarea 
                       required
-                      type="text"
-                      name="brand_name"
-                      className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                    />
+                      name="growth_challenge"
+                      rows={3}
+                       
+                      className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
+                      placeholder="e.g. Scaling past Instagram, SKU pricing, distribution leaks..."
+                    ></textarea>
+                  </div>
+                  </div>
+                <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Specific Goal for Engagement</label>
+                    <textarea 
+                      required
+                      name="specific_goal"
+                      rows={2}
+                      className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
+                      placeholder="What exactly do you want to build?"
+                    ></textarea>
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                      Monthly Revenue (NGN)
-                    </label>
-                    <select
-                      name="revenue"
-                      className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                    >
-                      <option>Below 5M</option>
-                      <option>5M - 10M</option>
-                      <option>10M - 50M</option>
-                      <option>50M+</option>
-                    </select>
+                    <div>
+                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Why do you believe your brand is ready for structured growth ?</label>
+                    <textarea 
+                      required
+                      name="why_your_brand_should_grow"
+                      rows={3}
+                       
+                      className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all"
+                      placeholder=""
+                    ></textarea>
                   </div>
-                </div>
+                  </div>
 
-                <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                    Primary Growth Challenge
-                  </label>
-                  <textarea
-                    required
-                    rows={2}
-                    name="growth_challenge"
-                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                  />
-                </div>
 
-                <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                    What do you want help with?
-                  </label>
-                  <textarea
-                    required
-                    rows={2}
-                    name="specific_goal"
-                    className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                  />
-                </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Budget Range for Strategic consulting (NGN)</label>
+                      <select name="budget_range" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                        <option>Under 30M</option>
+                        <option>30M - 50M</option>
+                        <option>50M - 100M</option>
+                        <option>100M+</option>
+                      </select>
+                    </div>
 
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">What are you current sales channels ?</label>
+                      <select name="sales_channels" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
+                        <option>Instagram only</option>
+                        <option>Websites</option>
+                        <option>Retails Stores</option>
+                        <option> Distributors</option>
+                        <option>Export</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      required
-                      type="text"
-                      name="from_name"
-                      className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                    />
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Your Full Name</label>
+                      <input required type="text" name="from_name" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Official Email</label>
+                      <input required type="email" name="from_email" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all" />
+                    </div>
                   </div>
-
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">
-                      Official Email
-                    </label>
-                    <input
-                      required
-                      type="email"
-                      name="from_email"
-                      className="w-full bg-zinc-900/50 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none"
-                    />
-                  </div>
-                </div>
-
-                <input
-                  type="hidden"
-                  name="submit_date"
-                  value={new Date().toLocaleString()}
-                />
-
-                <button
+                {/* Hidden field for submission date */}
+               <input 
+                 type="hidden" 
+    name="submit_date" 
+                 value={new Date().toLocaleString()} 
+                   />
+                <button 
                   type="submit"
-                  className="w-full py-4 gold-bg text-black font-bold uppercase tracking-widest rounded mt-6 hover:brightness-110 active:scale-[0.98]"
+                  className="w-full py-5 gold-bg text-black font-bold uppercase tracking-widest text-lg rounded hover:brightness-110 active:scale-[0.98] transition-all shadow-xl"
                 >
-                  Submit Brand for Review
+                  Submit Brand Assessment
                 </button>
               </form>
             </>

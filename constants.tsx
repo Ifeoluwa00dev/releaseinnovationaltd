@@ -101,3 +101,18 @@ export const METRICS: Metric[] = [
     description: "Reserved for founders focused on scalable legacy"
   }
 ];
+
+export const TEAM_MEMBERS = [
+  {
+    name: "Sarah John",
+    role: "Operations Lead",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80",
+    description: "Sarah makes sure all client systems run smoothly every day."
+  },
+  {
+    name: "David Obi",
+    role: "Retail Coordinator",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
+    description: "David manages the connections between our brands and major shops."
+  }
+];

@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
               Location
             </h4>
             <p className="text-zinc-400">
-              Metro homes. Lagos Nigeria
+              Metro homes, Kunle Asolo street, Before Lagos Business School, Lagos Nigeria.
             </p>
           </div>
 

@@ -1,12 +1,13 @@
 
 import React from 'react';
 import SectionHeading from '../components/SectionHeading';
+import { TEAM_MEMBERS } from '../constants';
 
 const About: React.FC = () => {
   return (
     <div className="pt-32 pb-24 px-4 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading title="Strategic Growth Architect" subtitle="Akudolu Onyinye" />
+        <SectionHeading title="Akudolu Onyinye" subtitle="Strategic Growth Architect" />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative">
@@ -74,6 +75,26 @@ const About: React.FC = () => {
           </div>
           
         </div>
+
+        {/* team */}
+        <div className="py-24 border-t border-navy/5">
+          <SectionHeading title="Expert Support Staff" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {TEAM_MEMBERS.map((member, i) => (
+              <div key={i} className="bg-white p-12 rounded-[2rem] shadow-sm border border-navy/5 text-center">
+                <img 
+                  src={member.image} 
+                  alt={member.name} 
+                  className="w-32 h-32 rounded-full object-cover mx-auto mb-10 shadow-xl border-4 border-ivory"
+                />
+                <h4 className="text-3xl font-serif text-navy mb-3">{member.name}</h4>
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-forest mb-6">{member.role}</p>
+                <p className="text-navy/50 text-sm leading-loose max-w-xs mx-auto">{member.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className= "mt-32 item-center">
               <h3 className="text-3xl font-serif font-bold text-white mb-6">Our Philosophy</h3>
               <div className="space-y-4 text-zinc-400 border-l-2 border-amber-500/40 pl-6">

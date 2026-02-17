@@ -63,7 +63,7 @@ const Home: React.FC = () => {
               <ul className="space-y-6">
                 {PAIN_POINTS.map((point, i) => (
                   <li key={i} className="flex items-start group">
-                    <span className="text-red-500/50 mr-4 font-mono">0{i+1}</span>
+                    <span className="text-red-500/50 mr-4 font-mono">▪</span>
                     <span className="text-zinc-300 group-hover:text-white transition-colors">{point}</span>
                   </li>
                 ))}
