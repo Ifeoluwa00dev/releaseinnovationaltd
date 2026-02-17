@@ -120,22 +120,20 @@ const Home: React.FC = () => {
                 className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
                 style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
               >
-                The Critical Gap
+                Common Growth Challenges Nigerian Brands Face
               </span>
               <h2
                 className="text-4xl font-bold mb-8 leading-tight"
                 style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
               >
-                Most Nigerian Cosmetic Brands Are
-                Built On <span style={{ color: C.forest }}>Sand.</span>
+                We know the hurdles brands encounter, because we’ve worked with them and studied the patterns.
+                
               </h2>
               <p
                 className="mb-8 text-lg leading-relaxed"
                 style={{ color: '#4B5563', fontFamily: 'Montserrat, sans-serif' }}
               >
-                Founders often mistake high engagement for high scalability. If your business
-                stops when your Instagram app is closed, you don't have a brand — you have a
-                digital hustle.
+                 Here are the most common barriers to growth:
               </p>
 
               <ul className="space-y-4">
@@ -167,23 +165,39 @@ const Home: React.FC = () => {
               >
                 We Understand Your Growth Challenges — And We Structure the Solution.
               </h3>
-              <p
-                className="leading-relaxed mb-8"
-                style={{ color: 'rgba(253,250,246,0.70)', fontFamily: 'Montserrat, sans-serif' }}
+              
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: <BarChart3 size={28} style={{ color: C.gold }} />, title: 'Sales System Setup',   desc: 'We help you move from informal WhatsApp or DM selling into a structured system that turns your digital presence into consistent, trackable sales.' },
+              { icon: <TrendingUp size={28} style={{ color: C.gold }} />, title: 'Product & Profit Optimisation',  desc: 'We guide you to focus on high-profit products, reduce slow-moving stock, and manage inventory with better control and clarity.' },
+              { icon: <Globe2     size={28} style={{ color: C.gold }} />, title: 'Market Expansion Strategy',     desc: 'We design rollout strategies for retail placement, trade fairs, and market activations to increase your brands physical visibility and distribution reach.' },
+              { icon: <Sparkles  size={28} style={{ color: C.gold }} />, title: 'Business Growth Planning',    desc: 'We structure practical expansion plans that help you grow into stronger locations, new markets, and profitable opportunities.' },
+            ].map((sol, i) => (
+              <div
+                key={i}
+                className="bg-white p-8 border-b-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl"
+                style={{ borderBottomColor: 'transparent' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderBottomColor = C.gold; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderBottomColor = 'transparent'; }}
               >
-                Growth is not about doing more. It is about building systems strong enough
-                to carry more. We partner with beauty founders ready to build beyond the hustle.
-              </p>
-              <Link
-                to="/services"
-                className="flex items-center space-x-2 font-bold uppercase tracking-widest text-sm transition-colors"
-                style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.goldLight; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = C.gold; }}
-              >
-                <span>View Our Solutions</span>
-                <ArrowRight size={16} />
-              </Link>
+                <div className="mb-6">{sol.icon}</div>
+                <h4
+                  className="text-xl font-bold mb-3"
+                  style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+                >
+                  {sol.title}
+                </h4>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {sol.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+              
             </div>
           </div>
         </div>
@@ -219,7 +233,7 @@ const Home: React.FC = () => {
 
 
       {/* ── SOLUTIONS GRID ───────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.ivory }}>
+      {/* <section className="py-24" style={{ backgroundColor: C.ivory }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2
@@ -267,7 +281,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* ── METRICS ──────────────────────────────────────────────── */}
@@ -320,7 +334,14 @@ const Home: React.FC = () => {
           style={{ backgroundColor: C.gold }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <SectionHeading title="Proof of Strategy" subtitle="Testimonials" light />
+          <SectionHeading title="Proof of Strategy" subtitle="What People Say About Working With Onyi" light />
+          <p className="relative p-4 rounded-xl italic leading-relaxed text-xl"
+                style={{
+                 
+                  
+                  color: 'rgba(253,250,246,0.85)',
+                  fontFamily: 'Cormorant Garamond, serif',
+                }}> Clients, peers, and partners recognize the clarity, insight, and premium quality she brings to every project.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
             {TESTIMONIALS.map((t: { id: string|number; quote: string; author: string; role: string }) => (
@@ -379,44 +400,14 @@ const Home: React.FC = () => {
             className="max-w-xl mx-auto mb-10 text-lg font-light"
             style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
           >
-            Access is limited to beauty founders ready to build beyond the noise.
-            We partner with those committed to creating a true legacy.
+             Access is limited to beauty founders ready to build beyond the hustle.
+We partner with those committed to creating a structured, profitable, and lasting business -a true legacy.
+<br />
+Ready to make growth predictable? Book your strategy session now.
+
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link
-              to="/contact"
-              className="px-12 py-6 font-bold uppercase tracking-widest text-sm transition-all hover:scale-105"
-              style={{
-                backgroundColor: C.gold, color: C.navy,
-                fontFamily: 'Montserrat, sans-serif',
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.goldLight; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
-            >
-              Request Growth Assessment
-            </Link>
-
-            <Link
-              to="/services"
-              className="px-12 py-6 font-bold uppercase tracking-widest text-sm transition-all"
-              style={{
-                border: `1px solid rgba(197,160,89,0.35)`,
-                color: C.gold,
-                fontFamily: 'Montserrat, sans-serif',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.backgroundColor = 'rgba(197,160,89,0.10)';
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.backgroundColor = 'transparent';
-              }}
-            >
-              The Architecture
-            </Link>
-          </div>
+          
         </div>
       </section>
 

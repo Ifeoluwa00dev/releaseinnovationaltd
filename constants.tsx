@@ -5,12 +5,12 @@ import { Service, Testimonial, Metric } from './types';
 export const BRAND_NAME = "Release Innovations LTD";
 
 export const PAIN_POINTS = [
-  "Inconsistent Pricing Structures",
-  "Lack of SKU Clarity & Inventory Intelligence",
-  "Weak Retail & Physical Market Penetration",
-  "Over-reliance on Volatile Instagram Algorithms",
-  "Undefined Distributor & Reseller Strategies",
-  "No Scalable Growth Roadmap"
+  "Inconsistent pricing : Many brands struggle to set the right prices for products and offers.",
+  "Unclear product tracking — Limited visibility on which products sell best and which stall.",
+  "Weak market presence — Low reach in retail stores and physical markets",
+  "Over-reliance on social platforms — Vulnerable to algorithm changes and unpredictable reach.",
+  "Undefined sales network — No clear strategy for distributors and resellers.",
+  "No growth roadmap — No structured plan for scaling the business effectively."
 ];
 
 export const SERVICES: Service[] = [
@@ -46,31 +46,58 @@ export const SERVICES: Service[] = [
   }
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    quote: "Onyinye didn't just give us a plan; she gave us a machine. We moved from 100% Instagram sales to a structured network of 12 regional distributors in 4 months.",
-    author: "Founder, Skincare Brand",
-    role: "Growth Client"
+    quote: " Onyi has a unique ability to organize complex sales processes and make them easy to implement. Her guidance gave us clarity we didn’t have before.",
+    author: "Business Peer",
+    role: "Process & Execution Recognition"
   },
   {
-    id: 2,
-    quote: "The SKU clarity alone saved us millions in wasted inventory. If you are serious about moving from hustle to legacy, this is the only call you need to make.",
-    author: "CEO, Cosmetic House",
-    role: "Strategy Client"
-  },
+  id: 2,
+  quote: 'After Onyi broke down how much I was missing out and what I could realistically be making, I was shocked! I even said, I didn\'t know money was in cosmetics like this — I’ve been playing all this time',
+  author: "Client",
+  role: "Strategy Client"
+},
+
   {
     id: 3,
-    quote: "I thought I didn't need a digital strategist because I had visibility and steady sales. Meeting Onyi showed me the gaps in my digital structure that were costing me revenue",
+    quote: "I didn’t realize I needed an expert in digital marketing until Onyi opened my eyes. I thought selling on Instagram was enough, but she showed me there’s so much more to growth. I was completely amazed!",
     author: "Beauty Brand Founder",
     role: "Digital Impact Client"
   },
   {
-    id: 4,
-    quote: "After implementing her framework, my website improved, my campaigns became measurable and my brand finally aligned online.",
-    author: "CEO, Cosmetic House",
-    role: "Digital Impact Client "
+  id: 4,
+  quote: 'The frameworks Onyi introduced for market expansion and sales systems were intelligent, especially in how she plans to execute them. I\'m really impressed!',
+  author: "CEO, Cosmetic House",
+  role: "Digital Impact Client"
+},
+
+{
+    id: 5,
+    role: "Design & User Experience",
+    quote: "Onyi’s team builds the best websites. The interface is beautiful and effortless. It’s clear she understands both aesthetics and user experience. I was genuinely impressed!",
+    author: "Client",
+    
   },
+  
+  
+
 
   
 ];

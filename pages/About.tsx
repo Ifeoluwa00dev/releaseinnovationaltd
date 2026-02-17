@@ -146,16 +146,14 @@ const About: React.FC = () => {
               className="text-2xl md:text-3xl italic leading-relaxed"
               style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
             >
-              "To identify where Nigerian beauty brands are losing revenue and fix it — both in-store
-              and digitally, so they can recover lost income and scale sustainably for the long term."
+              "To identify where Nigerian beauty brands are losing revenue and fix it .both in-store and digitally ,so they can recover lost income and scale sustainably for the long term."
             </h3>
             <div className="w-24 h-0.5 mx-auto" style={{ backgroundColor: C.gold }} />
             <h3
               className="text-2xl md:text-3xl italic leading-relaxed"
               style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
             >
-              "To help Nigerian beauty brands grow sustainably by creating systems that work
-              consistently, even when the founder isn't involved every day."
+              "To help Nigerian beauty brands grow sustainably by creating systems that work consistently, even when the founder isn’t involved every day."
             </h3>
           </div>
         </div>
@@ -320,12 +318,17 @@ const About: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Hard Data',            desc: 'Precise, measurable decisions guided by real numbers.' },
-              { title: 'SKU Intelligence',      desc: 'Tracking and optimizing for maximum profitability.' },
-              { title: 'Retail Penetration',    desc: 'Expanding into key stores and physical market hubs.' },
-              { title: 'Market Rollout',        desc: 'Step-by-step entry plans for new territories.' },
-              { title: 'Event Activation',      desc: 'Strategic trade fair leverage for high-value client acquisition.' },
-              { title: 'Digital Optimisation',  desc: 'Scaling online reach through structured conversion funnels.' },
+              { title: 'Hard Data',            desc: 'We use real numbers to guide decisions, so every strategy is precise and measurable.' },
+              { title: 'SKU Intelligence',      desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.' },
+              { title: 'Retail Penetration',    desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.' },
+              { title: 'Market Rollout',        desc: 'Step-by-step plans to enter new locations efficiently and profitably' },
+              { title: 'Event Activation',      desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.' },
+              { title: 'Digital Optimisation',  desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.' },
+              { title: 'Distributor Mapping', desc: 'Identify, structure, and manage partners to scale your distribution network effectively.'},
+               { title: 'Content Alignment', desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.'},
+              { title: 'Continuous Tracking', desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.'},
+ 
+
             ].map((method, i) => (
               <div
                 key={i}
@@ -344,6 +347,13 @@ const About: React.FC = () => {
                 >
                   {method.desc}
                 </p>
+
+                <p className="text-sm leading-relaxed"
+                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}>
+                    …and more tailored strategies designed specifically for your brand.
+                  </p>
+
+
               </div>
             ))}
           </div>
