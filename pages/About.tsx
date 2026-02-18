@@ -116,7 +116,7 @@ const About: React.FC = () => {
 
 Instead, ask:
 
-<ul className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+<ul className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
         {[
           ' “What is the secret in this specific industry I’m yet to discover?”',
           
@@ -136,15 +136,15 @@ Instead, ask:
           </li>
         ))}
       </ul>
-
-              </p>
-
-              <p
+<p
               className="italic font-bold p-4"
-              style={{ color: C.gold, fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}
+              style={{ color: C.gold, fontFamily: 'Cormorant Garamond, serif', fontSize: '1rem' }}
             >
               I understand the struggle. Onyi Dey here for you. 😉
             </p>
+              </p>
+
+              
 
               {/* Competency pills */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">

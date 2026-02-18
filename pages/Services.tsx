@@ -227,8 +227,8 @@ const Services: React.FC = () => {
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
-        { metric: 'SKU Optimization',     label: '',  desc: 'All products tracked and prioritized for profitability',                percentage: 100, delay: 0 },
-        { metric: 'Market Expansion',      label: 'Market Expansion',    desc: 'Physical and digital channel mapped for growth.',           percentage: 70, delay: 0.3 },
+        { metric: 'SKU Optimization',     label: 'Stock Keeping Unit',  desc: 'All products tracked and prioritized for profitability',                percentage: 100, delay: 0 },
+        { metric: 'Market Expansion',      label: 'Market Expansion',    desc: 'Physical and digital channel mapped for growth.',           percentage: 95, delay: 0.3 },
         { metric: 'Distribution & Reseller Systems',     label: 'Brand Clarity',       desc: 'Structured partnerships, scalable reach',       percentage: 90, delay: 0.15 },
         { metric: 'Content Alignment', label: '',  desc: 'Every post, campaign, and activation tied to sales goals.',             percentage: 95, delay: 0.45 },
         { metric: 'Revenue & Margin Intelligence', label: '',  desc: 'Tracking, analysis, and optimization built in',             percentage: 100, delay: 0.45 },
