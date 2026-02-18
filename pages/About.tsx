@@ -163,40 +163,9 @@ const About: React.FC = () => {
       {/* ── CORE EXPERTISE ───────────────────────────────────────── */}
       <section className="py-24" style={{ backgroundColor: C.champagne }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          
 
-            {/* Mission / Method */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  label: 'The Mission',
-                  text: 'To de-risk Nigerian beauty brands by building systems that outlive the founder\'s daily input.',
-                },
-                {
-                  label: 'The Method',
-                  text: 'Hard data, SKU intelligence, and aggressive retail penetration strategies.',
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="pl-6 py-2"
-                  style={{ borderLeft: `2px solid ${C.gold}` }}
-                >
-                  <h5
-                    className="text-sm font-bold uppercase tracking-widest mb-2"
-                    style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
-                  >
-                    {item.label}
-                  </h5>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: 'rgba(10,25,47,0.60)', fontFamily: 'Montserrat, sans-serif' }}
-                  >
-                    {item.text}
-                  </p>
-                </div>
-              ))}
-            </div>
+            
 
             {/* Expertise list */}
             <div
@@ -235,9 +204,72 @@ const About: React.FC = () => {
                 ))}
               </ul>
             </div>
+          
+        </div>
+      </section>
+
+
+{/* ── PROPRIETARY METHODS ──────────────────────────────────── */}
+      <section className="py-24" style={{ backgroundColor: C.ivory }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span
+              className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Proprietary Methods
+            </span>
+            <h3
+              className="text-4xl font-bold"
+              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+            >
+              Predictable Growth Frameworks
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: 'Hard Data',            desc: 'We use real numbers to guide decisions, so every strategy is precise and measurable.' },
+              { title: 'SKU Intelligence',      desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.' },
+              { title: 'Retail Penetration',    desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.' },
+              { title: 'Market Rollout',        desc: 'Step-by-step plans to enter new locations efficiently and profitably' },
+              { title: 'Event Activation',      desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.' },
+              { title: 'Digital Optimisation',  desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.' },
+              { title: 'Distributor Mapping', desc: 'Identify, structure, and manage partners to scale your distribution network effectively.'},
+               { title: 'Content Alignment', desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.'},
+              { title: 'Continuous Tracking', desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.'},
+ 
+
+            ].map((method, i) => (
+              <div
+                key={i}
+                className="bg-white p-8 border-l-4 shadow-sm transition-all hover:shadow-md"
+                style={{ borderLeftColor: C.gold }}
+              >
+                <h4
+                  className="text-lg font-bold mb-2 uppercase tracking-wide"
+                  style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {method.title}
+                </h4>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {method.desc}
+                </p>
+
+                <p className="text-sm leading-relaxed"
+                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}>
+                    …and more tailored strategies designed specifically for your brand.
+                  </p>
+
+
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
 
       {/* ── TEAM ─────────────────────────────────────────────────── */}
@@ -299,66 +331,7 @@ const About: React.FC = () => {
       </section>
 
 
-      {/* ── PROPRIETARY METHODS ──────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.ivory }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span
-              className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Proprietary Methods
-            </span>
-            <h3
-              className="text-4xl font-bold"
-              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
-            >
-              Predictable Growth Frameworks
-            </h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Hard Data',            desc: 'We use real numbers to guide decisions, so every strategy is precise and measurable.' },
-              { title: 'SKU Intelligence',      desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.' },
-              { title: 'Retail Penetration',    desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.' },
-              { title: 'Market Rollout',        desc: 'Step-by-step plans to enter new locations efficiently and profitably' },
-              { title: 'Event Activation',      desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.' },
-              { title: 'Digital Optimisation',  desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.' },
-              { title: 'Distributor Mapping', desc: 'Identify, structure, and manage partners to scale your distribution network effectively.'},
-               { title: 'Content Alignment', desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.'},
-              { title: 'Continuous Tracking', desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.'},
- 
-
-            ].map((method, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 border-l-4 shadow-sm transition-all hover:shadow-md"
-                style={{ borderLeftColor: C.gold }}
-              >
-                <h4
-                  className="text-lg font-bold mb-2 uppercase tracking-wide"
-                  style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {method.title}
-                </h4>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {method.desc}
-                </p>
-
-                <p className="text-sm leading-relaxed"
-                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}>
-                    …and more tailored strategies designed specifically for your brand.
-                  </p>
-
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
 
       {/* ── PHILOSOPHY ───────────────────────────────────────────── */}

@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, Globe2, Sparkles, TrendingUp } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { METRICS, TESTIMONIALS, PAIN_POINTS } from '../constants';
-
+import { C } from '../constants'
 /* ─── colour tokens (brand palette) ─────────────────────────── */
-const C = {
-  navy:       '#0a192f',
-  forest:     '#1a392a',
-  ivory:      '#fdfaf6',
-  champagne:  '#f0e6c8',
-  gold:       '#c5a059',
-  goldLight:  '#dcc18d',
-};
+
 
 const Home: React.FC = () => {
   return (
@@ -151,7 +144,7 @@ const Home: React.FC = () => {
             </div>
 
             {/* Right panel */}
-            <div
+            {/* <div
               className="p-12 relative overflow-hidden"
               style={{ backgroundColor: C.navy }}
             >
@@ -167,38 +160,9 @@ const Home: React.FC = () => {
               </h3>
               
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: <BarChart3 size={28} style={{ color: C.gold }} />, title: 'Sales System Setup',   desc: 'We help you move from informal WhatsApp or DM selling into a structured system that turns your digital presence into consistent, trackable sales.' },
-              { icon: <TrendingUp size={28} style={{ color: C.gold }} />, title: 'Product & Profit Optimisation',  desc: 'We guide you to focus on high-profit products, reduce slow-moving stock, and manage inventory with better control and clarity.' },
-              { icon: <Globe2     size={28} style={{ color: C.gold }} />, title: 'Market Expansion Strategy',     desc: 'We design rollout strategies for retail placement, trade fairs, and market activations to increase your brands physical visibility and distribution reach.' },
-              { icon: <Sparkles  size={28} style={{ color: C.gold }} />, title: 'Business Growth Planning',    desc: 'We structure practical expansion plans that help you grow into stronger locations, new markets, and profitable opportunities.' },
-            ].map((sol, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 border-b-2 border-transparent transition-all duration-300 shadow-sm hover:shadow-xl"
-                style={{ borderBottomColor: 'transparent' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderBottomColor = C.gold; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderBottomColor = 'transparent'; }}
-              >
-                <div className="mb-6">{sol.icon}</div>
-                <h4
-                  className="text-xl font-bold mb-3"
-                  style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
-                >
-                  {sol.title}
-                </h4>
-                <p
-                  className="text-sm leading-relaxed"
-                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {sol.desc}
-                </p>
-              </div>
-            ))}
-          </div>
               
-            </div>
+              
+            </div> */}
           </div>
         </div>
       </section>
@@ -287,42 +251,43 @@ const Home: React.FC = () => {
       {/* ── METRICS ──────────────────────────────────────────────── */}
       <section className="py-32" style={{ backgroundColor: C.navy }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading title="Impact & Intelligence" subtitle="System Benchmarks" light />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-            {METRICS.map((metric: { id: string|number; value: string; label: string; description: string }) => (
-              <div
-                key={metric.id}
-                className="p-10 rounded-lg border-t-2 transition-all group cursor-default"
-                style={{
-                  background: 'rgba(253,250,246,0.05)',
-                  border: '1px solid rgba(197,160,89,0.20)',
-                  borderTopColor: C.gold,
-                }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.goldLight; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.gold; }}
-              >
-                <span
-                  className="text-4xl font-bold block mb-2"
-                  style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
-                >
-                  {metric.value}
-                </span>
-                <h3
-                  className="text-sm font-bold mb-4 uppercase tracking-[0.2em]"
-                  style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {metric.label}
-                </h3>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: 'rgba(253,250,246,0.50)', fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {metric.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+  <SectionHeading title="And We Structure the Solution" subtitle="We Understand Your Growth Challenges" light />
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    {METRICS.map((metric: { id: string | number; icon: React.ReactNode; value: string; label: string; description: string }) => (
+      <div
+        key={metric.id}
+        className="p-10 rounded-lg transition-all duration-300 cursor-default"
+        style={{
+          background: 'rgba(253,250,246,0.05)',
+          border: '1px solid rgba(197,160,89,0.20)',
+          borderTopColor: C.gold,
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.goldLight; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.gold; }}
+      >
+        <div className="mb-6">{metric.icon}</div>
+        <span
+          className="text-4xl font-bold block mb-2"
+          style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
+        >
+          {metric.value}
+        </span>
+        <h3
+          className="text-sm font-bold mb-4 uppercase tracking-[0.2em]"
+          style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
+        >
+          {metric.label}
+        </h3>
+        <p
+          className="text-xs leading-relaxed"
+          style={{ color: 'rgba(253,250,246,0.50)', fontFamily: 'Montserrat, sans-serif' }}
+        >
+          {metric.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
       </section>
 
 

@@ -1,8 +1,17 @@
 
 import React from 'react';
 import { Service, Testimonial, Metric } from './types';
-
+import {BarChart3, TrendingUp, Globe2, Sparkles} from "lucide-react"
 export const BRAND_NAME = "Release Innovations LTD";
+
+export const C = {
+  navy:      '#0a192f',
+  forest:    '#1a392a',
+  ivory:     '#fdfaf6',
+  champagne: '#f0e6c8',
+  gold:      '#c5a059',
+  goldLight: '#dcc18d',
+};
 
 export const PAIN_POINTS = [
   "Inconsistent pricing : Many brands struggle to set the right prices for products and offers.",
@@ -45,19 +54,6 @@ export const SERVICES: Service[] = [
     ]
   }
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -105,27 +101,31 @@ export const TESTIMONIALS: Testimonial[] = [
 export const METRICS: Metric[] = [
   {
     id: 1,
-    label: "Sales Shift",
-    value: "80%",
-    description: "Migration from manual DM sales to automated distribution"
+     icon: <BarChart3 size={28} style={{ color: C.gold }} />,
+    label: "--",
+    value: "Sales System Setup",
+    description: "We help you move from informal WhatsApp or DM selling into a structured system that turns your digital presence into consistent, trackable sales."
   },
   {
     id: 2,
-    label: "SKU Efficiency",
-    value: "100%",
-    description: "Precision inventory tracking and high-margin focus"
+     icon: <TrendingUp size={28} style={{ color: C.gold }} />,
+    label: "--",
+    value: "Product & Profit Optimization",
+    description: "We guide you to focus on high-profit products, reduce slow-moving stock, and manage inventory with better control and clarity."
   },
   {
     id: 3,
-    label: "Market Depth",
-    value: "National",
-    description: "Retail presence across key Nigerian beauty hubs"
+     icon: <Globe2     size={28} style={{ color: C.gold }} />,
+    label: "--",
+    value: "Business Growth Planning",
+    description: "We structure practical expansion plans that help you grow into stronger locations, new markets, and profitable opportunities."
   },
   {
     id: 4,
-    label: "Client Value",
-    value: "High-Tier",
-    description: "Reserved for founders focused on scalable legacy"
+    label: "--",
+    icon: <Sparkles  size={28} style={{ color: C.gold }} />,
+    value: "Market Expansion Strategy",
+    description: "We design rollout strategies for retail placement, trade fairs, and market activations to increase your brand’s physical visibility and distribution reach."
   }
 ];
 

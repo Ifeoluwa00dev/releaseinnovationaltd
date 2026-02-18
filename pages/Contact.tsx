@@ -94,8 +94,10 @@ const Contact: React.FC = () => {
                 className="text-lg font-light mb-12 leading-relaxed"
                 style={{ color: 'rgba(253,250,246,0.70)', fontFamily: 'Montserrat, sans-serif' }}
               >
-                We are not available for everybody. We partner exclusively with beauty founders
-                who are ready to build beyond the hustle into structured, profitable legacies.
+                 Access is limited to beauty founders ready to build beyond the hustle.
+We partner with those committed to creating a structured, profitable, and lasting business -a true legacy.
+<br />
+Ready to make growth predictable? Book your strategy session now.
               </p>
 
               {/* Info blocks */}

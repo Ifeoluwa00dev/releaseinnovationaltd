@@ -16,6 +16,7 @@ export interface Testimonial {
 export interface Metric {
   id: number;
   label: string;
+  icon: React.ReactNode;
   value: string;
   description: string;
 }
