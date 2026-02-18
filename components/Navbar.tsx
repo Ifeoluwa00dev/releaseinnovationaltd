@@ -12,6 +12,7 @@ const Navbar: React.FC<{ onSchedule: () => void }> = ({ onSchedule }) => {
     { name: 'About',    path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Contact',  path: '/contact' },
+    { name: 'Reviews', path: '/reviews'}
   ];
 
   const isActive = (path: string) => location.pathname === path;

@@ -55,18 +55,22 @@ const About: React.FC = () => {
 
             {/* Copy column */}
             <div>
+
+<h1
+                className="text-4xl lg:text-6xl font-bold mb-4"
+                style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+              >
+                Akudolu Onyinye
+              </h1>
+
+
               <span
                 className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
                 style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
               >
                 Founder &amp; Lead Architect
               </span>
-              <h1
-                className="text-4xl lg:text-5xl font-bold mb-4"
-                style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
-              >
-                Akudolu Onyinye
-              </h1>
+              
               <h2
                 className="text-xl mb-6 italic"
                 style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}

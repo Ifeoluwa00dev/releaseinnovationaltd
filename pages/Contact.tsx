@@ -103,25 +103,7 @@ Ready to make growth predictable? Book your strategy session now.
               {/* Info blocks */}
               <div className="space-y-10">
 
-                {/* Requirements note */}
-                <div className="flex items-start space-x-5">
-                  <div className="w-2 h-2 rounded-full mt-1 flex-shrink-0" style={{ backgroundColor: C.gold }} />
-                  <div>
-                    <h4
-                      className="text-xs font-bold uppercase tracking-widest mb-2"
-                      style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      The Requirements
-                    </h4>
-                    <p
-                      className="text-sm leading-relaxed"
-                      style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      We are selective because structured growth requires a specific mindset.
-                      We work with founders who are playing the long game.
-                    </p>
-                  </div>
-                </div>
+                
 
                 {/* Location */}
                 <div className="flex items-start space-x-5">

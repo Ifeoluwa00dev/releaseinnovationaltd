@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
 
           {/* Brand */}
           <div>
@@ -30,13 +30,7 @@ const Footer: React.FC = () => {
             >
               {BRAND_NAME}
             </h3>
-            <p
-              className="text-sm leading-relaxed mb-6"
-              style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
-            >
-              We build the systems that make selling predictable, measurable, and scalable.
-              Elevating beauty brands into high-authority market leaders.
-            </p>
+            
 
             {/* Social icons */}
             <div className="flex space-x-3">
@@ -73,7 +67,7 @@ const Footer: React.FC = () => {
               className="text-sm font-bold uppercase tracking-[0.2em] mb-6"
               style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
             >
-              Contact Intelligence
+              Contact 
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3 text-sm"
@@ -110,33 +104,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Core focus */}
-          <div>
-            <h4
-              className="text-sm font-bold uppercase tracking-[0.2em] mb-6"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Core Focus
-            </h4>
-            <ul
-              className="space-y-2 text-sm"
-              style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}
-            >
-              {[
-                'Market Expansion Strategy',
-                'Distribution Architecture',
-                'SKU Profit Optimisation',
-                'Digital Infrastructure',
-                'Premium Positioning',
-                'Revenue Protection',
-              ].map((item, i) => (
-                <li key={i} className="flex items-center space-x-2">
-                  <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ backgroundColor: C.gold }} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
+          
 
           {/* Quick links */}
           <div>
@@ -152,6 +121,7 @@ const Footer: React.FC = () => {
                 { label: 'About',    path: '/about' },
                 { label: 'Services', path: '/services' },
                 { label: 'Contact',  path: '/contact' },
+                { label: 'Reviews', path: '/reviews'}
               ].map((link) => (
                 <li key={link.label}>
                   <Link
