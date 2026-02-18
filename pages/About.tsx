@@ -90,11 +90,53 @@ const About: React.FC = () => {
               >
                I’ve seen brands with fewer followers outperform those with thousands, and smaller stores out-earn massive spaces. Growth is never about social media alone; it’s the work behind the scenes that delivers real results. I know exactly what drives that success.
 With hands-on experience in trade fair distribution, reseller networks, market expansion, and content creation, I combine market insight with operational precision. I help beauty brands turn raw potential into structured, profitable scale.
-Brand owners and aspiring founders, stop asking:
-• “How do I grow?”
-• “What is this brand doing better than I am?”
+Brand owners and aspiring founders, stop asking: <br />
+
+
+<ul className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          ' “How do I grow?” ',
+          '“What is this brand doing better than I am?”',
+          
+        ].map((skill, i) => (
+          <li key={i} className="flex items-center space-x-3">
+            <span
+              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+              style={{ backgroundColor: C.gold }}
+            />
+            <span
+              className="text-sm font-medium"
+              style={{ color: C.white , fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {skill}
+            </span>
+          </li>
+        ))}
+      </ul>
+
 Instead, ask:
-“What is the secret in this specific industry I’m yet to discover?”
+
+<ul className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          ' “What is the secret in this specific industry I’m yet to discover?”',
+          
+          
+        ].map((skill, i) => (
+          <li key={i} className="flex items-center space-x-3">
+            <span
+              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+              style={{ backgroundColor: C.gold }}
+            />
+            <span
+              className="text-sm font-medium"
+              style={{ color: C.white , fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {skill}
+            </span>
+          </li>
+        ))}
+      </ul>
+
 I understand the struggle. Onyi Dey here for you. 😉
 
               </p>
