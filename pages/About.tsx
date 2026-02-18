@@ -89,8 +89,8 @@ const About: React.FC = () => {
                 style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
               >
                I’ve seen brands with fewer followers outperform those with thousands, and smaller stores out-earn massive spaces. Growth is never about social media alone; it’s the work behind the scenes that delivers real results. I know exactly what drives that success.
-With hands-on experience in trade fair distribution, reseller networks, market expansion, and content creation, I combine market insight with operational precision. I help beauty brands turn raw potential into structured, profitable scale.
-Brand owners and aspiring founders, stop asking: <br />
+<br /> With hands-on experience in trade fair distribution, reseller networks, market expansion, and content creation, I combine market insight with operational precision. I help beauty brands turn raw potential into structured, profitable scale.
+<br /> Brand owners and aspiring founders, stop asking: <br />
 
 
 <ul className="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
