@@ -258,10 +258,10 @@ const About: React.FC = () => {
                   {method.desc}
                 </p>
 
-                <p className="text-sm leading-relaxed"
+                {/* <p className="text-sm leading-relaxed"
                   style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}>
                     …and more tailored strategies designed specifically for your brand.
-                  </p>
+                  </p> */}
 
 
               </div>
