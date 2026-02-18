@@ -238,22 +238,23 @@ const Services: React.FC = () => {
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
       >
-        Proven Results
+        When our framework is applied 
       </span>
       <h3
         className="text-4xl font-bold"
         style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
       >
-        Metrics of Success
+        Every core area of your business is fully covered
       </h3>
     </div>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {[
-        { metric: '200%',     label: 'Distributor Growth',  desc: 'Increase in product movement after structured strategy.',                percentage: 85, delay: 0 },
-        { metric: '100%',     label: 'Brand Clarity',       desc: 'Unified digital + physical messaging creating premium perception.',       percentage: 100, delay: 0.15 },
-        { metric: '12+',      label: 'Market Expansion',    desc: 'Successful rollout across multiple high-profile beauty fairs.',           percentage: 70, delay: 0.3 },
-        { metric: 'High-ROI', label: 'Digital Conversion',  desc: 'Optimised e-commerce and content strategy for repeat buys.',             percentage: 90, delay: 0.45 },
+        { metric: 'SKU Optimization',     label: '',  desc: 'All products tracked and prioritized for profitability',                percentage: 100, delay: 0 },
+        { metric: 'Market Expansion',      label: 'Market Expansion',    desc: 'Physical and digital channel mapped for growth.',           percentage: 70, delay: 0.3 },
+        { metric: 'Distribution & Reseller Systems',     label: 'Brand Clarity',       desc: 'Structured partnerships, scalable reach',       percentage: 90, delay: 0.15 },
+        { metric: 'Content Alignment', label: '',  desc: 'Every post, campaign, and activation tied to sales goals.',             percentage: 95, delay: 0.45 },
+        { metric: 'Revenue & Margin Intelligence', label: '',  desc: 'Tracking, analysis, and optimization built in',             percentage: 100, delay: 0.45 },
       ].map((stat, i) => (
         <StatCard key={i} {...stat} />
       ))}

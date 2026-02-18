@@ -168,31 +168,49 @@ const Home: React.FC = () => {
       </section>
 
 
-      {/* ── PHILOSOPHY QUOTE ─────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.champagne }}>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p
-            className="text-2xl md:text-4xl font-light leading-relaxed italic"
-            style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
-          >
-            "We don't consult to 'help' — We engineer the systems that make your growth
-            predictable and your market dominance inevitable."
-          </p>
-          <div className="mt-10">
-            <p
-              className="font-bold uppercase tracking-[0.3em] text-lg"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Akudolu Onyinye
-            </p>
-            <p
-              className="text-xs uppercase tracking-widest mt-2"
-              style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Market Strategist • Growth Architect
-            </p>
-          </div>
-        </div>
+      
+
+
+{/* ── METRICS ──────────────────────────────────────────────── */}
+      <section className="py-32" style={{ backgroundColor: C.navy }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <SectionHeading title="And We Structure the Solution" subtitle="We Understand Your Growth Challenges" light />
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+    {METRICS.map((metric: { id: string | number; icon: React.ReactNode; value: string; label: string; description: string }) => (
+      <div
+        key={metric.id}
+        className="p-10 rounded-lg transition-all duration-300 cursor-default"
+        style={{
+          background: 'rgba(253,250,246,0.05)',
+          border: '1px solid rgba(197,160,89,0.20)',
+          borderTopColor: C.gold,
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.goldLight; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.gold; }}
+      >
+        <div className="mb-6">{metric.icon}</div>
+        <span
+          className="text-4xl font-bold block mb-2"
+          style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
+        >
+          {metric.value}
+        </span>
+        <h3
+          className="text-sm font-bold mb-4 uppercase tracking-[0.2em]"
+          style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
+        >
+          {metric.label}
+        </h3>
+        <p
+          className="text-xs leading-relaxed"
+          style={{ color: 'rgba(253,250,246,0.50)', fontFamily: 'Montserrat, sans-serif' }}
+        >
+          {metric.description}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
       </section>
 
 
@@ -248,122 +266,131 @@ const Home: React.FC = () => {
       </section> */}
 
 
-      {/* ── METRICS ──────────────────────────────────────────────── */}
-      <section className="py-32" style={{ backgroundColor: C.navy }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <SectionHeading title="And We Structure the Solution" subtitle="We Understand Your Growth Challenges" light />
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-    {METRICS.map((metric: { id: string | number; icon: React.ReactNode; value: string; label: string; description: string }) => (
-      <div
-        key={metric.id}
-        className="p-10 rounded-lg transition-all duration-300 cursor-default"
-        style={{
-          background: 'rgba(253,250,246,0.05)',
-          border: '1px solid rgba(197,160,89,0.20)',
-          borderTopColor: C.gold,
-        }}
-        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.goldLight; }}
-        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderTopColor = C.gold; }}
-      >
-        <div className="mb-6">{metric.icon}</div>
-        <span
-          className="text-4xl font-bold block mb-2"
-          style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
-        >
-          {metric.value}
-        </span>
-        <h3
-          className="text-sm font-bold mb-4 uppercase tracking-[0.2em]"
-          style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
-        >
-          {metric.label}
-        </h3>
-        <p
-          className="text-xs leading-relaxed"
-          style={{ color: 'rgba(253,250,246,0.50)', fontFamily: 'Montserrat, sans-serif' }}
-        >
-          {metric.description}
-        </p>
-      </div>
-    ))}
-  </div>
-</div>
-      </section>
-
-
-      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
-      <section className="py-32 overflow-hidden relative" style={{ backgroundColor: C.forest }}>
-        {/* decorative skew strip */}
-        <div
-          className="absolute top-0 right-0 w-1/2 h-full -skew-x-12 translate-x-1/2 opacity-10"
-          style={{ backgroundColor: C.gold }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <SectionHeading title="Proof of Strategy" subtitle="What People Say About Working With Onyi" light />
-          <p className="relative p-4 rounded-xl italic leading-relaxed text-xl"
-                style={{
-                 
-                  
-                  color: 'rgba(253,250,246,0.85)',
-                  fontFamily: 'Cormorant Garamond, serif',
-                }}> Clients, peers, and partners recognize the clarity, insight, and premium quality she brings to every project.</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
-            {TESTIMONIALS.map((t: { id: string|number; quote: string; author: string; role: string }) => (
-              <blockquote
-                key={t.id}
-                className="relative p-12 rounded-3xl italic leading-relaxed text-xl"
-                style={{
-                  background: 'rgba(253,250,246,0.06)',
-                  border: `1px solid rgba(197,160,89,0.15)`,
-                  color: 'rgba(253,250,246,0.85)',
-                  fontFamily: 'Cormorant Garamond, serif',
-                }}
-              >
-                <p>"{t.quote}"</p>
-                <footer
-                  className="mt-8 not-italic flex items-center justify-between pt-8"
-                  style={{ borderTop: '1px solid rgba(197,160,89,0.15)' }}
-                >
-                  <div>
-                    <cite
-                      className="font-bold block text-sm uppercase tracking-widest not-italic"
-                      style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      {t.author}
-                    </cite>
-                    <span
-                      className="text-[10px] uppercase tracking-[0.3em]"
-                      style={{ color: 'rgba(253,250,246,0.40)', fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      {t.role}
-                    </span>
-                  </div>
-                  <div
-                    className="h-px w-12"
-                    style={{ backgroundColor: 'rgba(197,160,89,0.25)' }}
-                  />
-                </footer>
-              </blockquote>
-            ))}
+      {/* ── PHILOSOPHY QUOTE ─────────────────────────────────────── */}
+      <section className="py-24" style={{ backgroundColor: C.champagne }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p
+            className="text-2xl md:text-4xl font-light leading-relaxed italic"
+            style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+          >
+            "We don't consult to 'help' — We engineer the systems that make your growth
+            predictable and your market dominance inevitable."
+          </p>
+          <div className="mt-10">
+            <p
+              className="font-bold uppercase tracking-[0.3em] text-lg"
+              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Akudolu Onyinye
+            </p>
+            <p
+              className="text-xs uppercase tracking-widest mt-2"
+              style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              Market Strategist • Growth Architect
+            </p>
           </div>
         </div>
       </section>
 
 
+      {/* ── TESTIMONIALS ─────────────────────────────────────────── */}
+<section
+  className="py-32 overflow-hidden relative"
+  style={{
+    backgroundImage: `url('https://images.nappy.co/photo/HNuSZewwSTsVZw50X2UOH.jpg?width=1260')`, // swap with your image path
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed', // parallax feel, remove if unwanted
+  }}
+>
+  {/* dark gradient overlay */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: `linear-gradient(135deg, 
+        ${C.navy}f2 0%, 
+        ${C.navy}cc 40%, 
+        rgba(26,57,42,0.85) 100%
+      )`,
+    }}
+  />
+
+  {/* decorative skew strip */}
+  <div
+    className="absolute top-0 right-0 w-1/2 h-full -skew-x-12 translate-x-1/2 opacity-10 z-0"
+    style={{ backgroundColor: C.gold }}
+  />
+
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <SectionHeading title="Proof of Strategy" subtitle="What People Say About Working With Onyi" light />
+    <p
+      className="relative p-4 rounded-xl italic leading-relaxed text-xl"
+      style={{
+        color: 'rgba(253,250,246,0.85)',
+        fontFamily: 'Cormorant Garamond, serif',
+      }}
+    >
+      Clients, peers, and partners recognize the clarity, insight, and premium quality she brings to every project.
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+      {TESTIMONIALS.map((t: { id: string | number; quote: string; author: string; role: string }) => (
+        <blockquote
+          key={t.id}
+          className="relative p-12 rounded-3xl italic leading-relaxed text-xl"
+          style={{
+            background: 'rgba(253,250,246,0.06)',
+            border: `1px solid rgba(197,160,89,0.15)`,
+            color: 'rgba(253,250,246,0.85)',
+            fontFamily: 'Cormorant Garamond, serif',
+            backdropFilter: 'blur(8px)', // frosted glass effect on top of image
+          }}
+        >
+          <p>"{t.quote}"</p>
+          <footer
+            className="mt-8 not-italic flex items-center justify-between pt-8"
+            style={{ borderTop: '1px solid rgba(197,160,89,0.15)' }}
+          >
+            <div>
+              <cite
+                className="font-bold block text-sm uppercase tracking-widest not-italic"
+                style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {t.author}
+              </cite>
+              <span
+                className="text-[10px] uppercase tracking-[0.3em]"
+                style={{ color: 'rgba(253,250,246,0.40)', fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {t.role}
+              </span>
+            </div>
+            <div
+              className="h-px w-12"
+              style={{ backgroundColor: 'rgba(197,160,89,0.25)' }}
+            />
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+  </div>
+</section>
+
+
       {/* ── FINAL CTA ────────────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.navy }}>
+      <section className="py-24" style={{ backgroundColor: C.ivory }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             className="text-4xl sm:text-5xl font-bold mb-8"
-            style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', color: C.forest }}
           >
             Ready to move from hustle to{' '}
             <span style={{ color: C.gold }}>Scalable Systems?</span>
           </h2>
           <p
             className="max-w-xl mx-auto mb-10 text-lg font-light"
-            style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
+            style={{ color: 'rgba(34, 31, 26, 0.75)', fontFamily: 'Montserrat, sans-serif' }}
           >
              Access is limited to beauty founders ready to build beyond the hustle.
 We partner with those committed to creating a structured, profitable, and lasting business -a true legacy.
