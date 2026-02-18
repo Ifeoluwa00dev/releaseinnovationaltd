@@ -34,7 +34,7 @@ const About: React.FC = () => {
                 style={{ border: `4px solid ${C.gold}` }}
               />
               {/* Years badge */}
-              <div
+              {/* <div
                 className="absolute -bottom-6 -right-6 p-8 hidden md:block"
                 style={{ backgroundColor: C.gold }}
               >
@@ -50,7 +50,7 @@ const About: React.FC = () => {
                 >
                   Years Expertise
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Copy column */}
@@ -68,29 +68,35 @@ const About: React.FC = () => {
                 className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
                 style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
               >
-                Founder &amp; Lead Architect
+                Founder &amp; CEO .
               </span>
               
               <h2
                 className="text-xl mb-6 italic"
                 style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
               >
-                Market Strategist. Growth Architect.
+                Growth Architect
               </h2>
               <p
                 className="text-lg font-light leading-relaxed mb-6"
                 style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
               >
                 As the founder of <strong style={{ color: C.ivory }}>Release Innovations Ltd</strong>,
-                I partner with founders and premium brands to align digital and physical growth channels.
+                and an entrepreneur since my teens, I’m all about growth. Every business has what I call its 'Invincible Mechanics' if you want to call it a Business Secret, you’re not wrong.
               </p>
               <p
                 className="text-lg font-light leading-relaxed mb-10"
                 style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
               >
-                With over six years operating on the ground in Tradefair distribution, reseller
-                networks, and market expansion, I help brands strengthen revenue, optimize market
-                reach, and scale with authority rather than chaos.
+               I’ve seen brands with fewer followers outperform those with thousands, and smaller stores out-earn massive spaces. Growth is never about social media alone; it’s the work behind the scenes that delivers real results. I know exactly what drives that success.
+With hands-on experience in trade fair distribution, reseller networks, market expansion, and content creation, I combine market insight with operational precision. I help beauty brands turn raw potential into structured, profitable scale.
+Brand owners and aspiring founders, stop asking:
+• “How do I grow?”
+• “What is this brand doing better than I am?”
+Instead, ask:
+“What is the secret in this specific industry I’m yet to discover?”
+I understand the struggle. Onyi Dey here for you. 😉
+
               </p>
 
               {/* Competency pills */}
@@ -164,93 +170,200 @@ const About: React.FC = () => {
       </section>
 
 
-      {/* ── CORE EXPERTISE ───────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.champagne }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+      <section className="py-24" style={{ backgroundColor: C.forest }}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            
-
-            {/* Expertise list */}
-            <div
-              className="p-8 rounded-xl"
-              style={{
-                backgroundColor: 'rgba(10,25,47,0.05)',
-                border: `1px solid rgba(197,160,89,0.20)`,
-              }}
+    {/* Expertise list */}
+    <div
+      className="p-8 rounded-xl"
+      style={{
+        background: 'rgba(255, 255, 255, 0.25)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        border: '1px solid rgba(255, 255, 255, 0.4)',
+        boxShadow: '0 8px 32px rgba(197,160,89,0.10), inset 0 1px 0 rgba(255,255,255,0.6)',
+      }}
+    >
+      <h4
+        className="text-xs font-bold uppercase tracking-widest mb-6"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Core Expertise
+      </h4>
+      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          'Tradefair & Market Expansion',
+          'Distribution Architecture',
+          'Digital Strategy & E-Com',
+          'Revenue Protection',
+          'Premium Positioning',
+        ].map((skill, i) => (
+          <li key={i} className="flex items-center space-x-3">
+            <span
+              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+              style={{ backgroundColor: C.gold }}
+            />
+            <span
+              className="text-sm font-medium"
+              style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
             >
-              <h4
-                className="text-xs font-bold uppercase tracking-widest mb-6"
-                style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-              >
-                Core Expertise
-              </h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  'Tradefair & Market Expansion',
-                  'Distribution Architecture',
-                  'Digital Strategy & E-Com',
-                  'Revenue Protection',
-                  'Premium Positioning',
-                ].map((skill, i) => (
-                  <li key={i} className="flex items-center space-x-3">
-                    <span
-                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: C.gold }}
-                    />
-                    <span
-                      className="text-sm font-medium"
-                      style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
-                    >
-                      {skill}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          
-        </div>
-      </section>
+              {skill}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
+</section>
 
 
 {/* ── PROPRIETARY METHODS ──────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.ivory }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span
-              className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Proprietary Methods
-            </span>
-            <h3
-              className="text-4xl font-bold"
-              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
-            >
-              Predictable Growth Frameworks
-            </h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: 'Hard Data',            desc: 'We use real numbers to guide decisions, so every strategy is precise and measurable.' },
-              { title: 'SKU Intelligence',      desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.' },
-              { title: 'Retail Penetration',    desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.' },
-              { title: 'Market Rollout',        desc: 'Step-by-step plans to enter new locations efficiently and profitably' },
-              { title: 'Event Activation',      desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.' },
-              { title: 'Digital Optimisation',  desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.' },
-              { title: 'Distributor Mapping', desc: 'Identify, structure, and manage partners to scale your distribution network effectively.'},
-               { title: 'Content Alignment', desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.'},
-              { title: 'Continuous Tracking', desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.'},
- 
+<section className="py-24" style={{ backgroundColor: C.ivory }}>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            ].map((method, i) => (
-              <div
-                key={i}
-                className="bg-white p-8 border-l-4 shadow-sm transition-all hover:shadow-md"
-                style={{ borderLeftColor: C.gold }}
-              >
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <span
+        className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Proprietary Methods
+      </span>
+      <h3
+        className="text-4xl font-bold"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+      >
+        Predictable Growth Frameworks
+      </h3>
+      <div className="flex items-center justify-center gap-4 mt-6">
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+        <div className="w-2 h-2 rotate-45" style={{ backgroundColor: C.gold }} />
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+      </div>
+    </div>
+
+    {/* Grid */}
+    <div className="flex flex-col gap-4 md:gap-0 md:grid md:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: 'Hard Data',
+          desc: 'We use real numbers to guide decisions, so every strategy is precise and measurable.',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771447634/path-digital-tR0jvlsmCuQ-unsplash_i294f3.jpg',
+        },
+        {
+          title: 'SKU Intelligence',
+          desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771447848/amy-vosters-whQez1yttOw-unsplash_hrptda.jpg',
+        },
+        {
+          title: 'Retail Penetration',
+          desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771448960/tu-trinh-C7APoWebVaU-unsplash_jzkds0.jpg',
+        },
+        {
+          title: 'Market Rollout',
+          desc: 'Step-by-step plans to enter new locations efficiently and profitably.',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771450570/minseok-kwak-kuQ74DICYMY-unsplash_yy6dq1.jpg',
+        },
+        {
+          title: 'Event Activation',
+          desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.',
+          image: '/images/event.jpg',
+        },
+        {
+          title: 'Digital Optimisation',
+          desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.',
+          image: '/images/digital.jpg',
+        },
+        {
+          title: 'Distributor Mapping',
+          desc: 'Identify, structure, and manage partners to scale your distribution network effectively.',
+          image: '/images/distributor.jpg',
+        },
+        {
+          title: 'Content Alignment',
+          desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.',
+          image: '/images/content.jpg',
+        },
+        {
+          title: 'Continuous Tracking',
+          desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.',
+          image: '/images/tracking.jpg',
+        },
+      ].map((method, i) => {
+        const isEven = i % 2 === 0;
+        const imageOnRight = i % 2 === 0; // zigzag: even = image right, odd = image left
+
+        return (
+          <div
+            key={i}
+            className="relative group transition-all duration-300
+                       md:border-b md:border-r md:border-[rgba(197,160,89,0.15)]"
+            style={{ backgroundColor: isEven ? C.ivory : 'white' }}
+          >
+            {/* desktop: top animated gold line on hover */}
+            <div
+              className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 z-10"
+              style={{ backgroundColor: C.gold }}
+            />
+
+            {/* ── MOBILE: zigzag side-by-side ── */}
+            <div
+              className={`flex items-center gap-4 p-4 rounded-2xl md:hidden shadow-sm ${
+                imageOnRight ? 'flex-row-reverse' : 'flex-row'
+              }`}
+              style={{
+                backgroundColor: isEven ? 'white' : C.ivory,
+                border: '1px solid rgba(197,160,89,0.15)',
+              }}
+            >
+              {/* thumbnail */}
+              <div className="w-24 h-24 shrink-0 rounded-xl overflow-hidden">
+                <img
+                  src={method.image}
+                  alt={method.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* text */}
+              <div className="flex-1">
+                <div className="w-6 h-px mb-2" style={{ backgroundColor: C.gold }} />
                 <h4
-                  className="text-lg font-bold mb-2 uppercase tracking-wide"
+                  className="text-sm font-bold mb-1 uppercase tracking-wide"
+                  style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {method.title}
+                </h4>
+                <p
+                  className="text-xs leading-relaxed"
+                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {method.desc}
+                </p>
+              </div>
+            </div>
+
+            {/* ── DESKTOP: thumbnail on top, text below ── */}
+            <div className="hidden md:block">
+              <div className="relative w-full h-40 overflow-hidden">
+                <img
+                  src={method.image}
+                  alt={method.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: `linear-gradient(to top, ${C.navy}99, transparent)`,
+                  }}
+                />
+              </div>
+              <div className="p-8">
+                <div className="w-8 h-px mb-4" style={{ backgroundColor: C.gold }} />
+                <h4
+                  className="text-lg font-bold mb-3 uppercase tracking-wide"
                   style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
                 >
                   {method.title}
@@ -261,19 +374,16 @@ const About: React.FC = () => {
                 >
                   {method.desc}
                 </p>
-
-                {/* <p className="text-sm leading-relaxed"
-                  style={{ color: '#6B7280', fontFamily: 'Montserrat, sans-serif' }}>
-                    …and more tailored strategies designed specifically for your brand.
-                  </p> */}
-
-
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
+          </div>
+        );
+      })}
+    </div>
+
+  </div>
+</section>
 
 
       {/* ── TEAM ─────────────────────────────────────────────────── */}
@@ -284,13 +394,13 @@ const About: React.FC = () => {
               className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
               style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
             >
-              The Team
+              Meet 
             </span>
             <h3
               className="text-4xl font-bold"
               style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
             >
-              Engineers of Brand Growth
+              Some of our Team
             </h3>
           </div>
 
@@ -356,16 +466,14 @@ const About: React.FC = () => {
             }}
           >
             <p>
-              As brands evolve, so must their structure. The systems that once supported growth
-              may no longer be sufficient for expansion, authority, or premium positioning.
+              As brands evolve, so must their structure. The systems that supported you at the start are often not enough to carry you through expansion or position you as a premium brand.
             </p>
             <p>
-              At a certain level, refinement becomes essential — not because a brand is weak,
-              but because it is ready for a more intentional standard of operation.
+              At a certain level, an Upgrade is required,not because a brand is weak, but because it is ready for a more intentional standard of operation.
             </p>
             <p>
-              Strategic alignment between distribution, digital infrastructure, pricing intelligence,
-              and market expansion ensures that growth remains sustainable and brand value remains protected.
+              With a solid structure like the one we create at Release Innovations, we align distribution, digital infrastructure, market expansion, and content creation. We ensure your growth is sustainable and your brand value remains protected.
+              Na Release dey run am ☺️
             </p>
             <p
               className="italic font-bold"
@@ -373,8 +481,22 @@ const About: React.FC = () => {
             >
               This is the work We do.
             </p>
+
+            <Link
+                to="/contact"
+                className="inline-block px-10 py-4 font-bold uppercase tracking-widest text-sm transition-all"
+                style={{ backgroundColor: C.gold, color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.goldLight; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
+              >
+                Get The Release Upgrade
+              </Link>
           </div>
+
+          
         </div>
+
+        
       </section>
 
     </div>

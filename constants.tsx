@@ -11,6 +11,7 @@ export const C = {
   champagne: '#f0e6c8',
   gold:      '#c5a059',
   goldLight: '#dcc18d',
+  white: '#ffff',
 };
 
 export const PAIN_POINTS = [
