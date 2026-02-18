@@ -115,57 +115,8 @@ const Services: React.FC = () => {
   return (
     <div style={{ backgroundColor: C.ivory }}>
 
-      {/* ── HEADER ───────────────────────────────────────────────── */}
-<section
-  className="pt-40 pb-32 py-24 text-center relative overflow-hidden"
-  style={{
-    backgroundImage: `url('https://res.cloudinary.com/drkksaa3i/image/upload/v1771440639/sarah-elizabeth-O3gOgPB4sRU-unsplash_e3klym.jpg')`, // swap with your image path
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
-  }}
->
-  {/* gradient overlay */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background: `linear-gradient(135deg,
-        ${C.forest}f5 0%,
-        ${C.forest}cc 50%,
-        ${C.navy}e6 100%
-      )`,
-    }}
-  />
+    
 
-  {/* decorative skew strip */}
-  <div
-    className="absolute top-0 right-0 w-1/2 h-full -skew-x-12 translate-x-1/2 opacity-10 z-0"
-    style={{ backgroundColor: C.gold }}
-  />
-
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <span
-      className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-      style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-    >
-      Our Offering
-    </span>
-    <h1
-      className="text-5xl font-bold mb-8"
-      style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
-    >
-      Structural Intelligence for{' '}
-      <span style={{ color: C.gold }}>Scale.</span>
-    </h1>
-    <p
-      className="max-w-2xl mx-auto text-lg font-light leading-relaxed"
-      style={{ color: 'rgba(253,250,246,0.80)', fontFamily: 'Montserrat, sans-serif' }}
-    >
-      We don't just consult — We build the system that makes selling predictable, measurable,
-      and scalable. We align your physical market expertise with digital dominance.
-    </p>
-  </div>
-</section>
 
 
       {/* ── SERVICES GRID ────────────────────────────────────────── */}

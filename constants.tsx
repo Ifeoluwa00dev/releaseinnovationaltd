@@ -16,11 +16,11 @@ export const C = {
 
 export const PAIN_POINTS = [
   "Inconsistent pricing : Many brands struggle to set the right prices for products and offers.",
-  "Unclear product tracking — Limited visibility on which products sell best and which stall.",
-  "Weak market presence — Low reach in retail stores and physical markets",
-  "Over-reliance on social platforms — Vulnerable to algorithm changes and unpredictable reach.",
-  "Undefined sales network — No clear strategy for distributors and resellers.",
-  "No growth roadmap — No structured plan for scaling the business effectively."
+  "Unclear product tracking, Limited visibility on which products sell best and which stall.",
+  "Weak market presence, Low reach in retail stores and physical markets",
+  "Over-reliance on social platforms, Vulnerable to algorithm changes and unpredictable reach.",
+  "Undefined sales network, No clear strategy for distributors and resellers.",
+  "No growth roadmap, No structured plan for scaling the business effectively."
 ];
 
 export const SERVICES: Service[] = [

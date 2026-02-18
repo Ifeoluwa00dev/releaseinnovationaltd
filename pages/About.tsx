@@ -137,9 +137,14 @@ Instead, ask:
         ))}
       </ul>
 
-I understand the struggle. Onyi Dey here for you. 😉
-
               </p>
+
+              <p
+              className="italic font-bold p-4"
+              style={{ color: C.gold, fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}
+            >
+              I understand the struggle. Onyi Dey here for you. 😉
+            </p>
 
               {/* Competency pills */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
@@ -515,15 +520,15 @@ I understand the struggle. Onyi Dey here for you. 😉
             </p>
             <p>
               With a solid structure like the one we create at Release Innovations, we align distribution, digital infrastructure, market expansion, and content creation. We ensure your growth is sustainable and your brand value remains protected.
-              Na Release dey run am ☺️
+              
             </p>
-            <p
+            
+<p
               className="italic font-bold"
               style={{ color: C.gold, fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}
             >
-              This is the work We do.
+              Na Release dey run am ☺️
             </p>
-
             <Link
                 to="/contact"
                 className="inline-block px-10 py-4 font-bold uppercase tracking-widest text-sm transition-all"
