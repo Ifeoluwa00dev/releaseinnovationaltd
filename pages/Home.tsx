@@ -273,7 +273,7 @@ const Home: React.FC = () => {
             className="text-2xl md:text-4xl font-light leading-relaxed italic"
             style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
           >
-            "We don't consult to 'help' — We engineer the systems that make your growth
+            "We don't consult to 'help', We engineer the systems that make your growth
             predictable and your market dominance inevitable."
           </p>
           <div className="mt-10">
@@ -298,7 +298,7 @@ const Home: React.FC = () => {
 
 
       {/* ── FINAL CTA ────────────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.ivory }}>
+      {/* <section className="py-24" style={{ backgroundColor: C.ivory }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2
             className="text-4xl sm:text-5xl font-bold mb-8"
@@ -320,7 +320,7 @@ Ready to make growth predictable? Book your strategy session now.
 
           
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
