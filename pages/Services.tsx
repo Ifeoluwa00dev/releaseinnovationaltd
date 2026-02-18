@@ -43,7 +43,7 @@ const Services: React.FC = () => {
             className="max-w-2xl mx-auto text-lg font-light leading-relaxed"
             style={{ color: 'rgba(253,250,246,0.80)', fontFamily: 'Montserrat, sans-serif' }}
           >
-            I don't just consult — I build the system that makes selling predictable, measurable,
+            We don't just consult — We build the system that makes selling predictable, measurable,
             and scalable. We align your physical market expertise with digital dominance.
           </p>
         </div>
