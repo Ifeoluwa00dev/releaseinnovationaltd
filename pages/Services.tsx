@@ -256,60 +256,111 @@ const Services: React.FC = () => {
 
 
       {/* ── WHO WE WORK WITH ─────────────────────────────────────── */}
-      <section className="py-24" style={{ backgroundColor: C.champagne }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+<section className="py-24" style={{ backgroundColor: C.champagne }}>
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <span
+        className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Selective Partnership
+      </span>
+      <h2
+        className="text-4xl md:text-5xl font-bold"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+      >
+        Who We Work With
+      </h2>
+      <div className="flex items-center justify-center gap-4 mt-6">
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+        <div className="w-2 h-2 rotate-45" style={{ backgroundColor: C.gold }} />
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+      </div>
+    </div>
+
+    {/* Flowing list */}
+    <div className="flex flex-col">
+      {[
+        {
+          label: 'New Entrants',
+          text: 'Launching a new cosmetic brand with a robust market-ready structure from day one.',
+        },
+        {
+          label: 'Scaling Brands',
+          text: 'Existing brands with untapped potential ready for market expansion beyond Instagram.',
+        },
+        {
+          label: 'Premium Brands',
+          text: 'Exclusive brands that must scale without diluting authority or market perception.',
+        },
+      ].map((item, i) => (
+        <div key={i}>
+          <div
+            className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-16 py-10 transition-all duration-300 cursor-default"
+          >
+            {/* large ghost number */}
             <span
-              className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+              className="hidden md:block text-8xl font-bold leading-none select-none flex-shrink-0 w-24 transition-all duration-300"
+              style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                color: 'rgba(197,160,89,0.15)',
+              }}
             >
-              Selective Partnership
+              {String(i + 1).padStart(2, '0')}
             </span>
-            <h2
-              className="text-4xl md:text-5xl font-bold"
-              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+
+            {/* label + text */}
+            <div className="flex-1 flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+              <h4
+                className="md:w-48 shrink-0 text-xl md:text-2xl font-bold transition-colors duration-300 group-hover:opacity-80"
+                style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+              >
+                {item.label}
+              </h4>
+
+              {/* vertical divider — desktop only */}
+              <div
+                className="hidden md:block w-px self-stretch"
+                style={{ backgroundColor: 'rgba(197,160,89,0.3)' }}
+              />
+
+              {/* horizontal divider — mobile only */}
+              <div
+                className="md:hidden h-px w-10"
+                style={{ backgroundColor: C.gold }}
+              />
+
+              <p
+                className="flex-1 text-sm leading-relaxed"
+                style={{ color: 'rgba(10,25,47,0.65)', fontFamily: 'Montserrat, sans-serif' }}
+              >
+                {item.text}
+              </p>
+            </div>
+
+            {/* arrow — desktop */}
+            <span
+              className="hidden md:block text-xl transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0"
+              style={{ color: C.gold }}
             >
-              Who We Work With
-            </h2>
+              →
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                label: 'New Entrants',
-                text: 'Launching a new cosmetic brand with a robust market-ready structure from day one.',
-              },
-              {
-                label: 'Scaling Brands',
-                text: 'Existing brands with untapped potential ready for market expansion beyond Instagram.',
-              },
-              {
-                label: 'Premium Brands',
-                text: 'Exclusive brands that must scale without diluting authority or market perception.',
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="p-8 rounded-lg text-center bg-white shadow-sm transition-shadow hover:shadow-xl"
-                style={{ border: `1px solid rgba(197,160,89,0.20)` }}
-              >
-                <h4
-                  className="font-bold mb-4 uppercase tracking-widest text-xs"
-                  style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {item.label}
-                </h4>
-                <p
-                  className="leading-relaxed text-sm"
-                  style={{ color: 'rgba(10,25,47,0.65)', fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
+          {/* divider between items */}
+          {i < 2 && (
+            <div
+              className="h-px w-full"
+              style={{ backgroundColor: 'rgba(197,160,89,0.2)' }}
+            />
+          )}
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
 
       {/* ── CLOSING QUOTE / CTA ──────────────────────────────────── */}
