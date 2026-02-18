@@ -87,7 +87,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
           ) : (
             <>
               <h2 className="text-3xl font-serif font-bold text-white mb-2">
-                Brand Assessment
+                Brand Assessment Form
               </h2>
               <p className="text-zinc-400 mb-8 italic">
                 "Growth is not accidental. It is engineered."
