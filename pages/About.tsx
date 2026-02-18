@@ -316,7 +316,7 @@ Instead, ask:
         {
           title: 'Event Activation',
           desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.',
-          image: '/images/event.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771458525/event_dcvv98.jpg',
         },
         {
           title: 'Digital Optimisation',
