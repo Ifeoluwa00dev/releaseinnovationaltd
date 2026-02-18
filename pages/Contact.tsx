@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                 className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
                 style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
               >
-                Request Access
+                {/* Request Access */}
               </span>
               <h1
                 className="text-5xl font-bold mb-8 leading-tight"
