@@ -31,7 +31,7 @@ const Home: React.FC = () => {
         {/* background image overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
+            src="https://res.cloudinary.com/drkksaa3i/image/upload/v1771455610/hero_jxfvue.jpg"
             className="w-full h-full object-cover opacity-10 grayscale"
             alt=""
             aria-hidden="true"

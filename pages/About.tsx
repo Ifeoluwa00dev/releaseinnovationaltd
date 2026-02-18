@@ -270,7 +270,7 @@ I understand the struggle. Onyi Dey here for you. 😉
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
       >
-        Some of Our Methods
+        Some of Our Methods for
       </span>
       <h3
         className="text-4xl font-bold"
