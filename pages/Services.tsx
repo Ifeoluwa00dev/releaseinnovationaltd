@@ -1,5 +1,6 @@
-import React from 'react';
+import React , { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useInView } from 'framer-motion';
 import { Target, Layers, Layout, Shield } from 'lucide-react';
 import { SERVICES } from '../constants';
 
@@ -18,6 +19,97 @@ const iconMap: Record<number, React.ReactNode> = {
   2: <Shield  size={40} style={{ color: C.gold }} />,
   3: <Layout  size={40} style={{ color: C.gold }} />,
 };
+
+// Animated counter hook
+function useCounter(target: number, duration: number = 2000, inView: boolean) {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!inView) return;
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { setCount(target); clearInterval(timer); }
+      else setCount(Math.floor(start));
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, target, duration]);
+  return count;
+}
+
+// Single stat card
+function StatCard({
+  metric, label, desc, percentage, delay
+}: {
+  metric: string; label: string; desc: string; percentage: number; delay: number;
+}) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: '-50px' });
+  const count = useCounter(percentage, 2000, inView);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay }}
+      className="text-center p-8 transition-colors"
+      style={{ border: '1px solid rgba(255,255,255,0.10)' }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = C.gold; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.10)'; }}
+    >
+      {/* Metric value */}
+      <motion.div
+        className="text-4xl font-bold mb-2"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={inView ? { scale: 1, opacity: 1 } : {}}
+        transition={{ duration: 0.5, delay: delay + 0.2 }}
+      >
+        {metric}
+      </motion.div>
+
+      {/* Label */}
+      <div
+        className="text-xs uppercase tracking-widest font-bold mb-4"
+        style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        {label}
+      </div>
+
+      {/* Skill bar */}
+      <div
+        className="w-full rounded-full mb-4 overflow-hidden"
+        style={{ height: '3px', background: 'rgba(255,255,255,0.10)' }}
+      >
+        <motion.div
+          className="h-full rounded-full"
+          style={{ background: `linear-gradient(90deg, ${C.gold}, ${C.goldLight})` }}
+          initial={{ width: '0%' }}
+          animate={inView ? { width: `${count}%` } : {}}
+          transition={{ duration: 2, delay: delay + 0.3, ease: 'easeOut' }}
+        />
+      </div>
+
+      {/* Percentage label */}
+      <div
+        className="text-xs mb-3 font-bold"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        {inView ? count : 0}%
+      </div>
+
+      {/* Description */}
+      <p
+        className="text-xs leading-relaxed"
+        style={{ color: 'rgba(253,250,246,0.45)', fontFamily: 'Montserrat, sans-serif' }}
+      >
+        {desc}
+      </p>
+    </motion.div>
+  );
+}
+
 
 const Services: React.FC = () => {
   return (
@@ -140,59 +232,34 @@ const Services: React.FC = () => {
 
       {/* ── METRICS ──────────────────────────────────────────────── */}
       <section className="py-24" style={{ backgroundColor: C.navy }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span
-              className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-              style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              Proven Results
-            </span>
-            <h3
-              className="text-4xl font-bold"
-              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
-            >
-              Metrics of Success
-            </h3>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <span
+        className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Proven Results
+      </span>
+      <h3
+        className="text-4xl font-bold"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+      >
+        Metrics of Success
+      </h3>
+    </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { metric: '50–200%',  label: 'Distributor Growth',   desc: 'Increase in product movement after structured strategy.' },
-              { metric: '100%',     label: 'Brand Clarity',        desc: 'Unified digital + physical messaging creating premium perception.' },
-              { metric: 'States',   label: 'Market Expansion',     desc: 'Successful rollout across multiple high-profile beauty fairs.' },
-              { metric: 'High-ROI', label: 'Digital Conversion',   desc: 'Optimised e-commerce and content strategy for repeat buys.' },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="text-center p-8 transition-colors"
-                style={{ border: '1px solid rgba(255,255,255,0.10)' }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = C.gold; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.10)'; }}
-              >
-                <div
-                  className="text-4xl font-bold mb-2"
-                  style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
-                >
-                  {stat.metric}
-                </div>
-                <div
-                  className="text-xs uppercase tracking-widest font-bold mb-4"
-                  style={{ color: C.ivory, fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {stat.label}
-                </div>
-                <p
-                  className="text-xs leading-relaxed"
-                  style={{ color: 'rgba(253,250,246,0.45)', fontFamily: 'Montserrat, sans-serif' }}
-                >
-                  {stat.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { metric: '200%',     label: 'Distributor Growth',  desc: 'Increase in product movement after structured strategy.',                percentage: 85, delay: 0 },
+        { metric: '100%',     label: 'Brand Clarity',       desc: 'Unified digital + physical messaging creating premium perception.',       percentage: 100, delay: 0.15 },
+        { metric: '12+',      label: 'Market Expansion',    desc: 'Successful rollout across multiple high-profile beauty fairs.',           percentage: 70, delay: 0.3 },
+        { metric: 'High-ROI', label: 'Digital Conversion',  desc: 'Optimised e-commerce and content strategy for repeat buys.',             percentage: 90, delay: 0.45 },
+      ].map((stat, i) => (
+        <StatCard key={i} {...stat} />
+      ))}
+    </div>
+  </div>
+</section>
 
 
       {/* ── WHO WE WORK WITH ─────────────────────────────────────── */}
