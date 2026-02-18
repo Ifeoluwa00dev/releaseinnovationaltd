@@ -169,7 +169,7 @@ I understand the struggle. Onyi Dey here for you. 😉
         </div>
       </section>
 
-
+{/* EXPERTISE */}
       <section className="py-24" style={{ backgroundColor: C.forest }}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -228,13 +228,13 @@ I understand the struggle. Onyi Dey here for you. 😉
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
       >
-        Proprietary Methods
+        Some of Our Methods
       </span>
       <h3
         className="text-4xl font-bold"
         style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
       >
-        Predictable Growth Frameworks
+        Predictable Growth 
       </h3>
       <div className="flex items-center justify-center gap-4 mt-6">
         <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
