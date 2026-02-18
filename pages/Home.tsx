@@ -43,7 +43,7 @@ const Home: React.FC = () => {
             className="text-xs font-semibold uppercase tracking-[0.45em] mb-6 block"
             style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
           >
-            Growth Architecture &amp; Distribution Intelligence
+            Business Development &amp; Strategic Advisory Firm for Cosmetic Brands.
           </span>
 
           <h1
