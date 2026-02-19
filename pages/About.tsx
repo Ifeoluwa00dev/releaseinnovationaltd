@@ -217,52 +217,6 @@ Instead, ask:
       </section>
 
 {/* EXPERTISE */}
-      <section className="py-24" style={{ backgroundColor: C.forest }}>
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {/* Expertise list */}
-    <div
-      className="p-8 rounded-xl"
-      style={{
-        background: 'rgba(255, 255, 255, 0.25)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        border: '1px solid rgba(255, 255, 255, 0.4)',
-        boxShadow: '0 8px 32px rgba(197,160,89,0.10), inset 0 1px 0 rgba(255,255,255,0.6)',
-      }}
-    >
-      <h4
-        className="text-xs font-bold uppercase tracking-widest mb-6"
-        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-      >
-        Core Expertise
-      </h4>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {[
-          'Tradefair & Market Expansion',
-          'Distribution Architecture',
-          'Digital Strategy & E-Com',
-          'Revenue Protection',
-          'Premium Positioning',
-        ].map((skill, i) => (
-          <li key={i} className="flex items-center space-x-3">
-            <span
-              className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-              style={{ backgroundColor: C.gold }}
-            />
-            <span
-              className="text-sm font-medium"
-              style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}
-            >
-              {skill}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-
-  </div>
-</section>
 
 
 {/* ── PROPRIETARY METHODS ──────────────────────────────────── */}
