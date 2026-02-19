@@ -51,24 +51,24 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in-up">
           <span
-            className="text-xs font-semibold uppercase tracking-[0.45em] mb-6 block"
+            className="text-xs font-extrabold uppercase tracking-[0.45em] mb-6 block"
             style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
           >
             Business Development &amp; Strategic Advisory Firm for Cosmetic Brands.
           </span>
 
           <h1
-            className="text-5xl sm:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1]"
+            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold mb-8 leading-[1.1]"
             style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
           >
             Growth Is Not{' '}
-            <span className="italic" style={{ color: C.gold }}>Accidental.</span>
+            <span className="italic font-extrabold" style={{ color: C.gold }}>Accidental.</span>
             <br />
             It Is Engineered.
           </h1>
 
           <p
-            className="text-lg sm:text-xl font-light mb-10 leading-relaxed max-w-2xl mx-auto"
+            className="text-lg sm:text-xl font-extrabold mb-10 leading-relaxed max-w-2xl mx-auto"
             style={{ color: 'rgba(253,250,246,0.80)', fontFamily: 'Montserrat, sans-serif' }}
           >
            
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link
               to="/contact"
-              className="px-10 py-5 font-bold uppercase tracking-widest text-sm transition-all duration-300 shadow-xl hover:scale-105"
+              className="px-10 py-5 font-extrabold uppercase tracking-widest text-sm transition-all duration-300 shadow-xl hover:scale-105"
               style={{
                 backgroundColor: C.gold, color: C.navy,
                 fontFamily: 'Montserrat, sans-serif',
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
 
             <Link
   to="/about"
-  className="px-10 py-5 font-bold uppercase tracking-widest text-sm transition-all duration-300"
+  className="px-10 py-5 font-extrabold uppercase tracking-widest text-sm transition-all duration-300"
   style={{
     color: C.ivory,
     border: `1px solid rgba(197,160,89,0.7)`,

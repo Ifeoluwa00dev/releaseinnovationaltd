@@ -15,12 +15,10 @@ export const C = {
 };
 
 export const PAIN_POINTS = [
-  "Inconsistent pricing : Many brands struggle to set the right prices for products and offers.",
-  "Unclear product tracking, Limited visibility on which products sell best and which stall.",
-  "Weak market presence, Low reach in retail stores and physical markets",
-  "Over-reliance on social platforms, Vulnerable to algorithm changes and unpredictable reach.",
-  "Undefined sales network, No clear strategy for distributors and resellers.",
-  "No growth roadmap, No structured plan for scaling the business effectively."
+  "⁠Influencer Partnerships Wahala Many beauty brands collaborate with influencers or MUAs based on popularity rather than conversion power. They rarely track which collaborations actually generate revenue, and performance is often measured only by likes, views, or comments.As a result, the investment spent on influencing becomes guesswork.",
+  "Untracked Products & Sales Too many brands are flying blind, with no real way to track which products are actually moving or which stalls are performing.Without this data, they can’t tell: •	Which products are true best-sellers•	Which products are slow-movers•	Which stalls or locations are high-performing•	Why certain items aren’t selling Stock often sits on shelves,sometimes literally gathering dust ,while capital remains locked in unsold inventory.",
+  "Depending on Social Media Alone: Many brands are vulnerable to algorithm changes and unpredictable reach. If an account gets flagged or the algorithm shifts, sales can vanish overnight. Relying only on “DM to order” puts your business at the mercy of platforms you don’t own, making growth unpredictable and risky.",
+  
 ];
 
 export const SERVICES: Service[] = [
@@ -104,8 +102,8 @@ export const METRICS: Metric[] = [
     id: 1,
      icon: <BarChart3 size={28} style={{ color: C.gold }} />,
     label: "--",
-    value: "Sales System Setup",
-    description: "We help you move from informal WhatsApp or DM selling into a structured system that turns your digital presence into consistent, trackable sales."
+    value: "Influencer Pairing & Revenue Tracking",
+    description: "We identify MUAs and influencers with real purchasing authority in your target market.Each product is paired intentionally, not randomly, and every collaboration is tracked using performance codes and real sales data. No guesswork. No assumptions. Only measurable, real results."
   },
   {
     id: 2,
