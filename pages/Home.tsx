@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BarChart3, Globe2, Sparkles, TrendingUp } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
 import { METRICS, TESTIMONIALS, PAIN_POINTS } from '../constants';
+import heroVideo from '../assets/images/vaness.mp4';
 import { C } from '../constants'
 /* ─── colour tokens (brand palette) ─────────────────────────── */
 
@@ -37,12 +38,15 @@ const Home: React.FC = () => {
       background: `linear-gradient(135deg, ${C.navy}99 0%, ${C.forest}88 100%)`,
     }}
   />
-  <img
-    src="https://res.cloudinary.com/drkksaa3i/image/upload/v1771455610/hero_jxfvue.jpg"
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
     className="w-full h-full object-cover opacity-60"
-    alt=""
-    aria-hidden="true"
-  />
+  >
+    <source src= {heroVideo} type="video/mp4" />
+  </video>
 </div>
 
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in-up">
