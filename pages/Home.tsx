@@ -19,24 +19,32 @@ const Home: React.FC = () => {
         {/* ambient glow blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
-            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20"
+            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
             style={{ backgroundColor: C.gold }}
           />
           <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-20"
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
             style={{ backgroundColor: C.forest }}
           />
         </div>
 
         {/* background image overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://res.cloudinary.com/drkksaa3i/image/upload/v1771455610/hero_jxfvue.jpg"
-            className="w-full h-full object-cover opacity-10 grayscale"
-            alt=""
-            aria-hidden="true"
-          />
-        </div>
+        
+<div className="absolute inset-0 z-0">
+  {/* light gradient so text stays readable */}
+  <div
+    className="absolute inset-0 z-10"
+    style={{
+      background: `linear-gradient(135deg, ${C.navy}99 0%, ${C.forest}88 100%)`,
+    }}
+  />
+  <img
+    src="https://res.cloudinary.com/drkksaa3i/image/upload/v1771455610/hero_jxfvue.jpg"
+    className="w-full h-full object-cover opacity-60"
+    alt=""
+    aria-hidden="true"
+  />
+</div>
 
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in-up">
           <span
