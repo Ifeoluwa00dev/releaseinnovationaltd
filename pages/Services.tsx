@@ -370,7 +370,7 @@ const Services: React.FC = () => {
             className="text-3xl font-bold mb-8 italic"
             style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
           >
-            "I don't just create strategies; I build systems that turn visibility into measurable revenue."
+            "We don't just create strategies; We build systems that turn visibility into measurable revenue."
           </h2>
           <Link
             to="/contact"
