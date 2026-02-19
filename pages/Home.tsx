@@ -91,23 +91,29 @@ const Home: React.FC = () => {
             </Link>
 
             <Link
-              to="/about"
-              className="px-10 py-5 font-bold uppercase tracking-widest text-sm transition-all duration-300"
-              style={{
-                color: C.ivory, border: `1px solid rgba(253,250,246,0.30)`,
-                fontFamily: 'Montserrat, sans-serif',
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.borderColor = C.gold; el.style.color = C.gold;
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.borderColor = 'rgba(253,250,246,0.30)'; el.style.color = C.ivory;
-              }}
-            >
-              Our Philosophy
-            </Link>
+  to="/about"
+  className="px-10 py-5 font-bold uppercase tracking-widest text-sm transition-all duration-300"
+  style={{
+    color: C.ivory,
+    border: `1px solid rgba(197,160,89,0.7)`,
+    background: 'rgba(197,160,89,0.12)',
+    fontFamily: 'Montserrat, sans-serif',
+  }}
+  onMouseEnter={e => {
+    const el = e.currentTarget as HTMLElement;
+    el.style.borderColor = C.gold;
+    el.style.color = C.navy;
+    el.style.background = C.gold;
+  }}
+  onMouseLeave={e => {
+    const el = e.currentTarget as HTMLElement;
+    el.style.borderColor = 'rgba(197,160,89,0.7)';
+    el.style.color = C.ivory;
+    el.style.background = 'rgba(197,160,89,0.12)';
+  }}
+>
+  Our Philosophy
+</Link>
           </div>
         </div>
       </section>

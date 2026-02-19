@@ -255,12 +255,12 @@ Instead, ask:
         {
           title: 'SKU Intelligence',
           desc: 'Track and optimize products to focus on the most profitable items and reduce slow-moving stock.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771447848/amy-vosters-whQez1yttOw-unsplash_hrptda.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771464417/sku_intelligence_gie1sg.jpg',
         },
         {
           title: 'Retail Penetration',
           desc: 'Expand your brand into key stores, trade hubs, and markets where your products sell best.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771448960/tu-trinh-C7APoWebVaU-unsplash_jzkds0.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771464668/retail_penetration_ujgpdc.jpg',
         },
         {
           title: 'Market Rollout',
@@ -285,7 +285,7 @@ Instead, ask:
         {
           title: 'Content Alignment',
           desc: 'Provide content ideas that directly support your growth plan, ensuring every post, video, or campaign drives results.',
-          image: '/images/content.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771464417/content_alignment_1_th8t0z.jpg',
         },
         {
           title: 'Continuous Tracking',
