@@ -13,9 +13,8 @@ const Home: React.FC = () => {
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
-        style={{ background: `linear-gradient(135deg, ${C.navy} 0%, ${C.forest} 100%)` }}
-      >
+  className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
+>
         {/* ambient glow blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div
