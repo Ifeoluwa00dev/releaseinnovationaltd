@@ -280,7 +280,7 @@ Instead, ask:
         {
           title: 'Distributor Mapping',
           desc: 'Identify, structure, and manage partners to scale your distribution network effectively.',
-          image: '/images/distributor.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771508285/distributor_mapping_xgyou9.jpg',
         },
         {
           title: 'Content Alignment',
