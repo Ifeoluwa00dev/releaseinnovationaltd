@@ -56,7 +56,7 @@ const Home: React.FC = () => {
 
           {/* Available badge */}
 <div
-  className="inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold"
+  className="pt-2 inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold"
   style={{
     backgroundColor: 'rgba(255,255,255,0.10)',
     border: '1px solid rgba(255,255,255,0.30)',
