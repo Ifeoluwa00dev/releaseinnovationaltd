@@ -19,6 +19,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
  const [submitted, setSubmitted] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [salesChannels, setSalesChannels] = useState<string[]>([]);
+  const formRef = React.useRef<HTMLFormElement>(null);
 
   if (!isOpen) return null;
 
@@ -63,6 +64,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     });
   }
   setSalesChannels([]);
+  formRef.current?.reset();
   setSubmitted(true); // ← this shows the success screen
 })
     .catch((error) => {
@@ -115,7 +117,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                 "Growth is not accidental. It is engineered."
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">Brand Name</label>
