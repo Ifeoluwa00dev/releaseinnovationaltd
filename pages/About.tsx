@@ -275,7 +275,7 @@ Instead, ask:
         {
           title: 'Digital Optimisation',
           desc: 'Grow online reach and sales through social media, marketplaces, and direct-to-consumer channels.',
-          image: '/images/digital.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771592633/4_qwxsij.jpg',
         },
         {
           title: 'Distributor Mapping',

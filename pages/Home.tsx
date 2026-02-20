@@ -49,7 +49,27 @@ const Home: React.FC = () => {
   </video>
 </div>
 
+
+
+
         <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in-up">
+
+          {/* Available badge */}
+<div
+  className="inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold"
+  style={{
+    backgroundColor: 'rgba(255,255,255,0.10)',
+    border: '1px solid rgba(255,255,255,0.30)',
+    color: 'white',
+    fontFamily: 'Montserrat, sans-serif',
+  }}
+>
+  <span className="relative flex h-2 w-2">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: 'white' }} />
+    <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: 'white' }} />
+  </span>
+  <span>Now Accepting New Brand Partnerships</span>
+</div>
           <span
             className="text-xs font-extrabold uppercase tracking-[0.45em] mb-6 block"
             style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
@@ -133,6 +153,8 @@ const Home: React.FC = () => {
       >
         Common Barriers
       </span>
+      <p  className="text-sm leading-relaxed"
+              style={{ color: 'rgba(10,25,47,0.65)', fontFamily: 'Montserrat, sans-serif' }}> We know the hurdles brands encounters, because  we've worked with them and studied the pattern </p>
       <h2
         className="text-4xl md:text-5xl font-bold mb-6"
         style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
