@@ -265,12 +265,12 @@ Instead, ask:
         {
           title: 'Market Rollout',
           desc: 'Step-by-step plans to enter new locations efficiently and profitably.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771450570/minseok-kwak-kuQ74DICYMY-unsplash_yy6dq1.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771550179/market_jhjm0v.jpg',
         },
         {
           title: 'Event Activation',
           desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771458525/event_dcvv98.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771549969/event_1_exx3mp.jpg',
         },
         {
           title: 'Digital Optimisation',

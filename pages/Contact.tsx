@@ -19,35 +19,57 @@ const C = {
 const Contact: React.FC = () => {
   const [isSent, setIsSent] = useState(false);
 
+  const [salesChannels, setSalesChannels] = useState<string[]>([])
+
+const handleChannelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const value = e.target.value
+  setSalesChannels(prev =>
+    prev.includes(value)
+      ? prev.filter(c => c !== value)
+      : [...prev, value]
+  )
+}
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs.sendForm(
-      'service_pfjqfqd',
-      'template_aoeof4c',
-      e.currentTarget,
-      'ezMGR7P7mJlhZRBQ1'
-    )
-    .then((result) => {
-      console.log('Email sent successfully:', result.text);
+  // inject sales channels as a hidden field before sending
+  const form = e.currentTarget;
+  let hiddenInput = form.querySelector<HTMLInputElement>('input[name="sales_channels_joined"]');
+  if (!hiddenInput) {
+    hiddenInput = document.createElement('input');
+    hiddenInput.type = 'hidden';
+    hiddenInput.name = 'sales_channels';
+    form.appendChild(hiddenInput);
+  }
+  hiddenInput.value = salesChannels.join(', ');
 
-      // Track conversion — EmailJS success
-      if (typeof fbq !== 'undefined') { fbq('track', 'Contact'); }
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {
-          event_category: 'conversion',
-          event_label: 'consultation_request',
-        });
-      }
+  emailjs.sendForm(
+    'service_pfjqfqd',
+    'template_aoeof4c',
+    form,
+    'ezMGR7P7mJlhZRBQ1'
+  )
+  .then((result) => {
+    console.log('Email sent successfully:', result.text);
 
-      setIsSent(true);
-      setTimeout(() => setIsSent(false), 4000);
-    })
-    .catch((error) => {
-      console.error('Email send failed:', error);
-      alert('Failed to send message. Please try again or email us directly.');
-    });
-  };
+    if (typeof fbq !== 'undefined') { fbq('track', 'Contact'); }
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'form_submit', {
+        event_category: 'conversion',
+        event_label: 'consultation_request',
+      });
+    }
+
+    setIsSent(true);
+    setSalesChannels([]); // reset checkboxes after submit
+    setTimeout(() => setIsSent(false), 4000);
+  })
+  .catch((error) => {
+    console.error('Email send failed:', error);
+    alert('Failed to send message. Please try again or email us directly.');
+  });
+};
 
   /* ── shared input style helpers ────────────────────────────── */
   const inputClass = "w-full px-4 py-4 outline-none transition-all text-sm";
@@ -374,15 +396,39 @@ Ready to make growth predictable? Book your strategy session now.
                       </select>
                     </div>
                     <div>
-                      <label style={labelStyle}>Current Sales Channels</label>
-                      <select name="sales_channels" className={inputClass} style={inputStyle}>
-                        <option>Instagram only</option>
-                        <option>Websites</option>
-                        <option>Retail Stores</option>
-                        <option>Distributors</option>
-                        <option>Export</option>
-                      </select>
-                    </div>
+  <label style={labelStyle}>Current Sales Channels</label>
+  <div
+    className="grid grid-cols-2 gap-3 mt-2"
+  >
+    {[
+      'Instagram only',
+      'Websites',
+      'Retail Stores',
+      'Distributors',
+      'Export',
+    ].map((channel) => (
+      <label
+        key={channel}
+        className="flex items-center gap-3 cursor-pointer group"
+      >
+        <input
+  type="checkbox"
+  
+  value={channel}
+  checked={salesChannels.includes(channel)}
+  onChange={handleChannelChange}
+  className="w-4 h-4 accent-[#c5a059] cursor-pointer"
+/>
+        <span
+          className="text-sm"
+          style={inputStyle}
+        >
+          {channel}
+        </span>
+      </label>
+    ))}
+  </div>
+</div>
                   </div>
 
                   {/* Row 3 */}

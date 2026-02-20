@@ -16,37 +16,59 @@ interface AppointmentModalProps {
 }
 
 const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) => {
-  const [submitted, setSubmitted] = useState(false);
+ const [submitted, setSubmitted] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [salesChannels, setSalesChannels] = useState<string[]>([]);
 
   if (!isOpen) return null;
 
+  const handleChannelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setSalesChannels(prev =>
+      prev.includes(value)
+        ? prev.filter(c => c !== value)
+        : [...prev, value]
+    )
+  }
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_pfjqfqd",
-        "template_aoeof4c",
-        e.currentTarget,
-        "ezMGR7P7mJlhZRBQ1"
-      )
-      .then(() => {
-        if (window.fbq) window.fbq("track", "Contact");
-        if (window.gtag)
-          window.gtag("event", "form_submit", {
-            event_category: "conversion",
-            event_label: "consultation_request",
-          });
-
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          onClose();
-        }, 3000);
-      })
-      .catch(() => {
-        alert("Failed to send message. Please try again.");
-      });
+    
+  
+    // inject sales channels as a hidden field before sending
+    const form = e.currentTarget;
+    let hiddenInput = form.querySelector<HTMLInputElement>('input[name="sales_channels_joined"]');
+    if (!hiddenInput) {
+      hiddenInput = document.createElement('input');
+      hiddenInput.type = 'hidden';
+      hiddenInput.name = 'sales_channels';
+      form.appendChild(hiddenInput);
+    }
+    hiddenInput.value = salesChannels.join(', ');
+  
+    emailjs.sendForm(
+      'service_pfjqfqd',
+      'template_aoeof4c',
+      form,
+      'ezMGR7P7mJlhZRBQ1'
+    )
+    .then((result) => {
+  console.log('Email sent successfully:', result.text);
+  if (typeof window.fbq !== 'undefined') { window.fbq('track', 'Contact'); }
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('event', 'form_submit', {
+      event_category: 'conversion',
+      event_label: 'consultation_request',
+    });
+  }
+  setSalesChannels([]);
+  setSubmitted(true); // ← this shows the success screen
+})
+    .catch((error) => {
+      console.error('Email send failed:', error);
+      alert('Failed to send message. Please try again or email us directly.');
+    });
   };
 
   return (
@@ -162,15 +184,38 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-2">What are you current sales channels ?</label>
-                      <select name="sales_channels" className="w-full bg-black/40 border border-zinc-800 focus:border-amber-500 text-white p-4 rounded outline-none transition-all appearance-none">
-                        <option>Instagram only</option>
-                        <option>Websites</option>
-                        <option>Retails Stores</option>
-                        <option> Distributors</option>
-                        <option>Export</option>
-                      </select>
-                    </div>
+  <label className="block text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-3">
+    What are your current sales channels?
+  </label>
+  <div className="grid grid-cols-2 gap-3">
+    {[
+      'Instagram only',
+      'Websites',
+      'Retail Stores',
+      'Distributors',
+      'Export',
+    ].map((channel) => (
+      <label
+        key={channel}
+        className="flex items-center gap-3 cursor-pointer group"
+      >
+        <input
+          type="checkbox"
+          name="sales_channels"
+          value={channel}
+          checked={salesChannels.includes(channel)}
+          onChange={handleChannelChange}
+          className="w-4 h-4 accent-amber-500 cursor-pointer shrink-0"
+        />
+        <span className="text-sm text-zinc-300 group-hover:text-amber-500 transition-colors"
+          style={{ fontFamily: 'Montserrat, sans-serif' }}
+        >
+          {channel}
+        </span>
+      </label>
+    ))}
+  </div>
+</div>
                   </div>
 
                   

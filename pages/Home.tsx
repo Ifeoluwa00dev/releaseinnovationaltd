@@ -120,76 +120,312 @@ const Home: React.FC = () => {
 
 
       {/* ── THE PROBLEM ──────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
 
-            {/* Left copy */}
-            <div>
-              <span
-                className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
-                style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-              >
-                Common Growth Challenges Nigerian Brands Face
-              </span>
-              <h2
-                className="text-4xl font-bold mb-8 leading-tight"
-                style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
-              >
-                We know the hurdles brands encounter, because we’ve worked with them and studied the patterns.
-                
-              </h2>
-              <p
-                className="mb-8 text-lg leading-relaxed"
-                style={{ color: '#4B5563', fontFamily: 'Montserrat, sans-serif' }}
-              >
-                 Here are the most common barriers to growth:
-              </p>
+<section className="py-24" style={{ backgroundColor: C.ivory }}>
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
-              <ul className="space-y-4">
-                {PAIN_POINTS.map((point: string, i: number) => (
-                  <li key={i} className="flex items-center space-x-3 font-medium"
-                    style={{ color: C.navy, fontFamily: 'Montserrat, sans-serif' }}>
-                    <div
-                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: C.gold }}
-                    />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <span
+        className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Common Barriers
+      </span>
+      <h2
+        className="text-4xl md:text-5xl font-bold mb-6"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+      >
+        Here Are Some Common Barriers to Growth
+      </h2>
+      <div className="flex items-center justify-center gap-4">
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+        <div className="w-2 h-2 rotate-45" style={{ backgroundColor: C.gold }} />
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+      </div>
+    </div>
 
-            {/* Right panel */}
-            {/* <div
-              className="p-12 relative overflow-hidden"
-              style={{ backgroundColor: C.navy }}
+    {/* Barriers */}
+    <div className="flex flex-col gap-0">
+      {[
+        {
+          number: '01',
+          title: 'Influencer Partnerships Wahala',
+          summary: 'Many beauty brands collaborate with influencers or MUAs based on popularity rather than conversion power.',
+          points: [
+            'Collaborations are rarely tracked for actual revenue generated.',
+            'Performance is measured only by likes, views, or comments.',
+            'Investment spent on influencing becomes guesswork.',
+          ],
+        },
+        {
+          number: '02',
+          title: 'Untracked Products & Sales',
+          summary: 'Too many brands are flying blind, with no real way to track which products are actually moving or which stalls are performing.',
+          points: [
+            'No visibility on which products are true best-sellers or slow-movers.',
+            'No data on which stalls or locations are high-performing.',
+            'Stock sits on shelves while capital remains locked in unsold inventory.',
+          ],
+        },
+        {
+          number: '03',
+          title: 'Depending on Social Media Alone',
+          summary: 'Many brands are vulnerable to algorithm changes and unpredictable reach.',
+          points: [
+            'If an account gets flagged, sales can collapse overnight.',
+            'Algorithm shifts can wipe out months of organic growth.',
+            'No backup channel means no safety net for your revenue.',
+          ],
+        },
+      ].map((barrier, i) => (
+        <div
+          key={i}
+          className="group grid grid-cols-1 md:grid-cols-[120px_1fr] gap-0 transition-all duration-300"
+          style={{ borderBottom: '1px solid rgba(197,160,89,0.15)' }}
+        >
+          {/* left — large number */}
+          <div
+            className="hidden md:flex items-start justify-center pt-10 pb-10"
+            style={{ borderRight: '1px solid rgba(197,160,89,0.15)' }}
+          >
+            <span
+              className="text-6xl font-bold leading-none select-none transition-all duration-300 group-hover:opacity-100"
+              style={{
+                fontFamily: 'Cormorant Garamond, serif',
+                color: 'rgba(197,160,89,0.2)',
+              }}
             >
-              <div
-                className="absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 rounded-full"
-                style={{ backgroundColor: 'rgba(197,160,89,0.10)' }}
-              />
-              <h3
-                className="text-3xl mb-6 italic"
-                style={{ fontFamily: 'Cormorant Garamond, serif', color: C.gold }}
-              >
-                We Understand Your Growth Challenges — And We Structure the Solution.
-              </h3>
-              
+              {barrier.number}
+            </span>
+          </div>
 
-              
-              
-            </div> */}
+          {/* right — content */}
+          <div className="py-10 md:pl-12 flex flex-col gap-4">
+
+            {/* mobile number */}
+            <span
+              className="md:hidden text-3xl font-bold"
+              style={{ fontFamily: 'Cormorant Garamond, serif', color: 'rgba(197,160,89,0.4)' }}
+            >
+              {barrier.number}
+            </span>
+
+            {/* title */}
+            <h3
+              className="text-2xl md:text-3xl font-bold"
+              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.navy }}
+            >
+              {barrier.title}
+            </h3>
+
+            {/* gold divider */}
+            <div className="w-10 h-px" style={{ backgroundColor: C.gold }} />
+
+            {/* summary */}
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: 'rgba(10,25,47,0.65)', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {barrier.summary}
+            </p>
+
+            {/* bullet points */}
+            <ul className="flex flex-col gap-2 mt-2">
+              {barrier.points.map((point, j) => (
+                <li key={j} className="flex items-start gap-3">
+                  <span
+                    className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                    style={{ backgroundColor: C.gold }}
+                  />
+                  <span
+                    className="text-sm leading-relaxed"
+                    style={{ color: 'rgba(10,25,47,0.55)', fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </section>
-
-
+      ))}
+    </div>
+  </div>
+</section>
       
 
 
+<section className="py-24" style={{ backgroundColor: C.navy }}>
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <span
+        className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
+        style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+      >
+        Our Solutions
+      </span>
+      <h2
+        className="text-4xl md:text-5xl font-bold mb-6"
+        style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+      >
+        We Understand Your Growth Challenges
+      </h2>
+      <p
+        className="text-sm max-w-xl mx-auto mb-6"
+        style={{ color: 'rgba(253,250,246,0.60)', fontFamily: 'Montserrat, sans-serif' }}
+      >
+        We understand your growth challenges and we structure the solutions.
+      </p>
+      <div className="flex items-center justify-center gap-4">
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+        <div className="w-2 h-2 rotate-45" style={{ backgroundColor: C.gold }} />
+        <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
+      </div>
+    </div>
+
+    {/* Solutions */}
+    <div className="flex flex-col gap-0">
+      {[
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          ),
+          title: 'Influencer Pairing & Revenue Tracking',
+          summary: 'We identify MUAs and influencers with real purchasing authority in your target market.',
+          points: [
+            'Each product is paired intentionally, not randomly.',
+            'Every collaboration is tracked using performance codes and real sales data.',
+          ],
+          tags: ['No guesswork.', 'No assumptions.', 'Only measurable, real results.'],
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          ),
+          title: 'Comprehensive SKU & Performance Intelligence',
+          summary: 'In this market, information is everything. Our advanced tracking system provides complete visibility, from warehouse to retail floor.',
+          points: [
+            'We monitor every single unit to ensure your hottest products are always where your customers are.',
+            'Smart SKU tracking identifies best-sellers, slow-movers, and high-performing stalls.',
+            'Every data point becomes real, trackable profit.',
+          ],
+          tags: ['No guesswork.', 'Only actions that drive revenue.'],
+        },
+        {
+          icon: (
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          ),
+          title: 'Sales System Setup (SSS)',
+          summary: "We don't just build websites — we build revenue engines. Our systems move brands from informal social selling to structured, trackable sales channels.",
+          points: [
+            '24/7 Commerce: Campaigns run even when your shop is closed.',
+            'Own Your Business: Keep customer lists and sales data independent of algorithms.',
+            'Professional Digital Storefront: Transform from a social page into a polished storefront.',
+            'Automated Growth: Build systems that work for you even while you sleep.',
+          ],
+          tags: [],
+        },
+      ].map((solution, i) => (
+        <div
+          key={i}
+          className="group grid grid-cols-1 md:grid-cols-[80px_1fr] gap-0 transition-all duration-300"
+          style={{ borderBottom: '1px solid rgba(197,160,89,0.15)' }}
+        >
+          {/* left — icon column */}
+          <div
+            className="hidden md:flex items-start justify-center pt-10"
+            style={{ borderRight: '1px solid rgba(197,160,89,0.15)' }}
+          >
+            <div style={{ color: C.gold }}>
+              {solution.icon}
+            </div>
+          </div>
+
+          {/* right — content */}
+          <div className="py-10 md:pl-12 flex flex-col gap-4">
+
+            {/* mobile icon */}
+            <div className="md:hidden" style={{ color: C.gold }}>
+              {solution.icon}
+            </div>
+
+            {/* title */}
+            <h3
+              className="text-2xl md:text-3xl font-bold"
+              style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+            >
+              {solution.title}
+            </h3>
+
+            {/* gold divider */}
+            <div className="w-10 h-px" style={{ backgroundColor: C.gold }} />
+
+            {/* summary */}
+            <p
+              className="text-sm leading-relaxed"
+              style={{ color: 'rgba(253,250,246,0.60)', fontFamily: 'Montserrat, sans-serif' }}
+            >
+              {solution.summary}
+            </p>
+
+            {/* bullet points */}
+            <ul className="flex flex-col gap-2">
+              {solution.points.map((point, j) => (
+                <li key={j} className="flex items-start gap-3">
+                  <span
+                    className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
+                    style={{ backgroundColor: C.gold }}
+                  />
+                  <span
+                    className="text-sm leading-relaxed"
+                    style={{ color: 'rgba(253,250,246,0.50)', fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {point}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            {/* tags */}
+            {solution.tags.length > 0 && (
+              <div className="flex flex-wrap gap-3 mt-2">
+                {solution.tags.map((tag, k) => (
+                  <span
+                    key={k}
+                    className="text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider"
+                    style={{
+                      border: `1px solid rgba(197,160,89,0.30)`,
+                      color: C.gold,
+                      fontFamily: 'Montserrat, sans-serif',
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 {/* ── METRICS ──────────────────────────────────────────────── */}
-      <section className="py-32" style={{ backgroundColor: C.navy }}>
+      {/* <section className="py-32" style={{ backgroundColor: C.navy }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <SectionHeading title="And We Structure the Solution" subtitle="We Understand Your Growth Challenges" light />
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -228,7 +464,7 @@ const Home: React.FC = () => {
     ))}
   </div>
 </div>
-      </section>
+      </section> */}
 
 
       {/* ── SOLUTIONS GRID ───────────────────────────────────────── */}

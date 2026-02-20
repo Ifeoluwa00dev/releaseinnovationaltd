@@ -265,7 +265,7 @@ const Services: React.FC = () => {
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
       >
-        Selective Partnership
+        
       </span>
       <h2
         className="text-4xl md:text-5xl font-bold"
@@ -370,7 +370,7 @@ const Services: React.FC = () => {
             className="text-3xl font-bold mb-8 italic"
             style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
           >
-            "We don't just create strategies; We build systems that turn visibility into measurable revenue."
+            "We don't just create strategies; We build systems that turn visibility into real revenue."
           </h2>
           <Link
             to="/contact"

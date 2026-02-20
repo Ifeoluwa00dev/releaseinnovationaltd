@@ -66,8 +66,8 @@ export const TESTIMONIALS: Testimonial[] = [
   {
   id: 2,
   quote: 'After Onyi broke down how much I was missing out and what I could realistically be making, I was shocked! I even said, I didn\'t know money was in cosmetics like this. I’ve been playing all this time',
-  author: "Client",
-  role: "Strategy Client"
+  author: "Annette Umeh",
+  role: "Founder, Beauty by Zikky"
 },
 
   {
@@ -86,8 +86,8 @@ export const TESTIMONIALS: Testimonial[] = [
 {
     id: 5,
     role: "Design & User Experience",
-    quote: "Onyi’s team builds the best websites. The interface is beautiful and effortless. It’s clear she understands both aesthetics and user experience. I was genuinely impressed!",
-    author: "Client",
+    quote: "Onyi’s team builds the best websites. The interface is beautiful and effortless to  navigate. It’s clear she understands both aesthetics and user experience. Since launching, my brand feels more structured and professional. I absolutely love my website.",
+    author: "Ajie Joy",
     
   },
   
