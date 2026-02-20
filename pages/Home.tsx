@@ -13,140 +13,143 @@ const Home: React.FC = () => {
     <div style={{ backgroundColor: C.ivory, color: C.navy }}>
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
-      <section
-  className="pt-2relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
+     <section
+  className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
 >
-        {/* ambient glow blobs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div
-            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
-            style={{ backgroundColor: C.gold }}
-          />
-          <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
-            style={{ backgroundColor: C.forest }}
-          />
-        </div>
+  {/* ambient glow blobs */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div
+      className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
+      style={{ backgroundColor: C.gold }}
+    />
+    <div
+      className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] opacity-50"
+      style={{ backgroundColor: C.forest }}
+    />
+  </div>
 
-        {/* background image overlay */}
-        
-<div className="absolute inset-0 z-0">
-  {/* light gradient so text stays readable */}
-  <div
-    className="absolute inset-0 z-10"
-    style={{
-      background: `linear-gradient(135deg, ${C.navy}99 0%, ${C.forest}88 100%)`,
-    }}
-  />
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full object-cover opacity-60"
-  >
-    <source src= {heroVideo} type="video/mp4" />
-  </video>
-</div>
+  {/* background video overlay */}
+  <div className="absolute inset-0 z-0">
+    {/* light gradient so text stays readable */}
+    <div
+      className="absolute inset-0 z-10"
+      style={{
+        background: `linear-gradient(135deg, ${C.navy}99 0%, ${C.forest}88 100%)`,
+      }}
+    />
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="w-full h-full object-cover opacity-60"
+    >
+      <source src={heroVideo} type="video/mp4" />
+    </video>
+  </div>
 
+  <div className="relative z-20 text-center max-w-5xl mx-auto w-full animate-fade-in-up">
 
+    {/* Available badge */}
+    <div
+      className="inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold"
+      style={{
+        backgroundColor: 'rgba(255,255,255,0.10)',
+        border: '1px solid rgba(255,255,255,0.30)',
+        color: 'white',
+        fontFamily: 'Montserrat, sans-serif',
+      }}
+    >
+      <span className="relative flex h-2 w-2">
+        <span
+          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
+          style={{ backgroundColor: 'white' }}
+        />
+        <span
+          className="relative inline-flex rounded-full h-2 w-2"
+          style={{ backgroundColor: 'white' }}
+        />
+      </span>
+      <span className="hidden sm:inline">Now Accepting New Brand Partnerships</span>
+      <span className="sm:hidden">Now Accepting Partnerships</span>
+    </div>
 
+    <span
+      className="text-xs font-extrabold uppercase tracking-[0.45em] mb-6 block px-2"
+      style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
+    >
+      Business Development &amp; Strategic Advisory Firm for Cosmetic Brands.
+    </span>
 
-        <div className="relative z-10 text-center max-w-5xl mx-auto animate-fade-in-up">
+    <h1
+      className="text-4xl sm:text-7xl lg:text-8xl font-extrabold mb-8 leading-[1.1] px-2"
+      style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
+    >
+      Growth Is Not{' '}
+      <span className="italic font-extrabold" style={{ color: C.gold }}>Accidental.</span>
+      <br />
+      It Is Engineered.
+    </h1>
 
-          {/* Available badge */}
-<div
-  className="pt-2 inline-flex items-center space-x-2 px-4 py-2 rounded-full mb-6 text-xs font-semibold"
-  style={{
-    backgroundColor: 'rgba(255,255,255,0.10)',
-    border: '1px solid rgba(255,255,255,0.30)',
-    color: 'white',
-    fontFamily: 'Montserrat, sans-serif',
-  }}
->
-  <span className="relative flex h-2 w-2">
-    <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: 'white' }} />
-    <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: 'white' }} />
-  </span>
-  <span>Now Accepting New Brand Partnerships</span>
-</div>
-          <span
-            className="text-xs font-extrabold uppercase tracking-[0.45em] mb-6 block"
-            style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
-          >
-            Business Development &amp; Strategic Advisory Firm for Cosmetic Brands.
-          </span>
+    <p
+      className="text-base sm:text-xl font-extrabold mb-10 leading-relaxed max-w-2xl mx-auto px-2"
+      style={{ color: 'rgba(253,250,246,0.80)', fontFamily: 'Montserrat, sans-serif' }}
+    >
+      We design the systems that turn visibility into sustainable, measurable growth
+      for new, existing, and premium cosmetic brands.
+    </p>
 
-          <h1
-            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold mb-8 leading-[1.1]"
-            style={{ fontFamily: 'Cormorant Garamond, serif', color: C.ivory }}
-          >
-            Growth Is Not{' '}
-            <span className="italic font-extrabold" style={{ color: C.gold }}>Accidental.</span>
-            <br />
-            It Is Engineered.
-          </h1>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
+      <Link
+        to="/contact"
+        className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-extrabold uppercase tracking-widest text-xs sm:text-sm transition-all duration-300 shadow-xl hover:scale-105 text-center"
+        style={{
+          backgroundColor: C.gold,
+          color: C.navy,
+          fontFamily: 'Montserrat, sans-serif',
+        }}
+        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.goldLight; }}
+        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
+      >
+        Apply for Strategic Brand Review
+      </Link>
 
-          <p
-            className="text-lg sm:text-xl font-extrabold mb-10 leading-relaxed max-w-2xl mx-auto"
-            style={{ color: 'rgba(253,250,246,0.80)', fontFamily: 'Montserrat, sans-serif' }}
-          >
-           
-            We design the systems that turn visibility into sustainable, measurable growth
-            for new, existing, and premium cosmetic brands.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <Link
-              to="/contact"
-              className="px-10 py-5 font-extrabold uppercase tracking-widest text-sm transition-all duration-300 shadow-xl hover:scale-105"
-              style={{
-                backgroundColor: C.gold, color: C.navy,
-                fontFamily: 'Montserrat, sans-serif',
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.goldLight; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.backgroundColor = C.gold; }}
-            >
-              Apply for Strategic Brand Review
-            </Link>
-
-            <Link
-  to="/about"
-  className="px-10 py-5 font-extrabold uppercase tracking-widest text-sm transition-all duration-300"
-  style={{
-    color: C.ivory,
-    border: `1px solid rgba(197,160,89,0.7)`,
-    background: 'rgba(197,160,89,0.12)',
-    fontFamily: 'Montserrat, sans-serif',
-  }}
-  onMouseEnter={e => {
-    const el = e.currentTarget as HTMLElement;
-    el.style.borderColor = C.gold;
-    el.style.color = C.navy;
-    el.style.background = C.gold;
-  }}
-  onMouseLeave={e => {
-    const el = e.currentTarget as HTMLElement;
-    el.style.borderColor = 'rgba(197,160,89,0.7)';
-    el.style.color = C.ivory;
-    el.style.background = 'rgba(197,160,89,0.12)';
-  }}
->
-  Our Philosophy
-</Link>
-          </div>
-        </div>
-      </section>
+      <Link
+        to="/about"
+        className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 font-extrabold uppercase tracking-widest text-xs sm:text-sm transition-all duration-300 text-center"
+        style={{
+          color: C.ivory,
+          border: `1px solid rgba(197,160,89,0.7)`,
+          background: 'rgba(197,160,89,0.12)',
+          fontFamily: 'Montserrat, sans-serif',
+        }}
+        onMouseEnter={e => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.borderColor = C.gold;
+          el.style.color = C.navy;
+          el.style.background = C.gold;
+        }}
+        onMouseLeave={e => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.borderColor = 'rgba(197,160,89,0.7)';
+          el.style.color = C.ivory;
+          el.style.background = 'rgba(197,160,89,0.12)';
+        }}
+      >
+        Our Philosophy
+      </Link>
+    </div>
+  </div>
+</section>
 
 
       {/* ── THE PROBLEM ──────────────────────────────────────────── */}
       
-
-<section className="py-24" style={{ backgroundColor: C.ivory }}>
+<section className="pt-12 pb-6" style={{ backgroundColor: C.ivory }}>
   <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {/* Heading */}
-    <div className="text-center mb-20">
+    <div className="text-center mb-6">
       <span
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
@@ -199,6 +202,7 @@ const Home: React.FC = () => {
             'If an account gets flagged, sales can collapse overnight.',
             'Algorithm shifts can wipe out months of organic growth.',
             'No backup channel means no safety net for your revenue.',
+            'Relying only DM to order puts your business at the mercy of platforms you don\'t own, making growth unpredictable and risky '
           ],
         },
       ].map((barrier, i) => (
@@ -279,11 +283,11 @@ const Home: React.FC = () => {
       
 
 
-<section className="py-24" style={{ backgroundColor: C.navy }}>
+<section className="pt-12 pb-8" style={{ backgroundColor: C.navy }}>
   <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
     {/* Heading */}
-    <div className="text-center mb-20">
+    <div className="text-center mb-12">
       <span
         className="uppercase tracking-[0.3em] font-bold text-xs mb-4 block"
         style={{ color: C.gold, fontFamily: 'Montserrat, sans-serif' }}
@@ -351,7 +355,7 @@ const Home: React.FC = () => {
             </svg>
           ),
           title: 'Sales System Setup (SSS)',
-          summary: "We don't just build websites — we build revenue engines. Our systems move brands from informal social selling to structured, trackable sales channels.",
+          summary: "We don't just build websites, we build revenue engines. Our systems move brands from informal social selling to structured, trackable sales channels.",
           points: [
             '24/7 Commerce: Campaigns run even when your shop is closed.',
             'Own Your Business: Keep customer lists and sales data independent of algorithms.',
