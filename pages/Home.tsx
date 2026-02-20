@@ -14,7 +14,7 @@ const Home: React.FC = () => {
 
       {/* ── HERO ──────────────────────────────────────────────────── */}
       <section
-  className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
+  className="pt-2relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-20"
 >
         {/* ambient glow blobs */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -300,7 +300,7 @@ const Home: React.FC = () => {
         className="text-sm max-w-xl mx-auto mb-6"
         style={{ color: 'rgba(253,250,246,0.60)', fontFamily: 'Montserrat, sans-serif' }}
       >
-        We understand your growth challenges and we structure the solutions.
+         and we structure the solutions.
       </p>
       <div className="flex items-center justify-center gap-4">
         <div className="h-px w-16" style={{ backgroundColor: 'rgba(197,160,89,0.3)' }} />
