@@ -290,7 +290,7 @@ Instead, ask:
         {
           title: 'Continuous Tracking',
           desc: 'Measure progress, refine strategies, and adjust plans to ensure consistent and sustainable growth.',
-          image: '/images/tracking.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771710220/IMG-20260221-WA0026_lmhnvu.jpg',
         },
       ].map((method, i) => {
         const isEven = i % 2 === 0;
