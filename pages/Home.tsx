@@ -191,7 +191,7 @@ const Home: React.FC = () => {
           points: [
             'No visibility on which products are true best-sellers or slow-movers.',
             'No data on which stalls or locations are high-performing.',
-            'Stock sits on shelves while capital remains locked in unsold inventory.',
+            'Stock sits on shelves, sometimes literally gathering dust, while capital remains locked in unsold inventory.',
           ],
         },
         {
@@ -202,7 +202,7 @@ const Home: React.FC = () => {
             'If an account gets flagged, sales can collapse overnight.',
             'Algorithm shifts can wipe out months of organic growth.',
             'No backup channel means no safety net for your revenue.',
-            'Relying only DM to order puts your business at the mercy of platforms you don\'t own, making growth unpredictable and risky '
+            'Relying only on  \"DM to order\" puts your business at the mercy of platforms you don\'t own, making growth unpredictable and risky '
           ],
         },
       ].map((barrier, i) => (

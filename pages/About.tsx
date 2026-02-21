@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
               >
                 As the founder of <strong style={{ color: C.ivory }}>Release Innovations Ltd</strong>,
-                and an entrepreneur since my teens, I’m all about growth. Every business has what I call its 'Invincible Mechanics' if you want to call it a Business Secret, you’re not wrong.
+                and an entrepreneur since my teens, I’m all about growth. Every business has what I call its  <b>'Invincible Mechanics'</b>. Some call it 'Business Secret' I call it the foundation of scale.
               </p>
               <p
                 className="text-lg font-light leading-relaxed mb-10"
@@ -265,12 +265,12 @@ Instead, ask:
         {
           title: 'Market Rollout',
           desc: 'Step-by-step plans to enter new locations efficiently and profitably.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771550179/market_jhjm0v.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771634540/marketrolll_xbv7kb.jpg',
         },
         {
           title: 'Event Activation',
           desc: 'Strategically use trade fairs and events to increase visibility and attract high-value customers.',
-          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771549969/event_1_exx3mp.jpg',
+          image: 'https://res.cloudinary.com/drkksaa3i/image/upload/v1771634549/eventsactu_jmg9rx.jpg',
         },
         {
           title: 'Digital Optimisation',
