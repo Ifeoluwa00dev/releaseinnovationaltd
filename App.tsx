@@ -23,12 +23,7 @@ const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-   const location = useLocation()
-
-  useEffect(() => {
-    ReactGA.send({ hitType: 'pageview', page: location.pathname })
-  }, [location])
-  
+   
   return (
     <Router>
       <ScrollToTop />
