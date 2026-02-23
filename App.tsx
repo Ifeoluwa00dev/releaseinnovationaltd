@@ -8,11 +8,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Reviews from './pages/Reviews';
-import ReactGA from 'react-ga4'
 
-
-
-ReactGA.initialize(import.meta.env.VITE_GA_MEASUREMENT_ID)
 
 /* ── Scroll-to-top on route change ─────────────────────────── */
 const ScrollToTop = () => {
