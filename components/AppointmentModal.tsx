@@ -49,11 +49,11 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({ isOpen, onClose }) 
     hiddenInput.value = salesChannels.join(', ');
   
     emailjs.sendForm(
-      'service_pfjqfqd',
-      'template_aoeof4c',
-      form,
-      'ezMGR7P7mJlhZRBQ1'
-    )
+        'service_0q94131',
+        'template_c543hth',
+        form,
+        'xtS7EmX-6GX59Eujt'
+      )
     .then((result) => {
   console.log('Email sent successfully:', result.text);
   if (typeof window.fbq !== 'undefined') { window.fbq('track', 'Contact'); }

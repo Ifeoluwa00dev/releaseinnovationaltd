@@ -45,10 +45,10 @@ const handleChannelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   hiddenInput.value = salesChannels.join(', ');
 
   emailjs.sendForm(
-    'service_pfjqfqd',
-    'template_aoeof4c',
+    'service_0q94131',
+    'template_c543hth',
     form,
-    'ezMGR7P7mJlhZRBQ1'
+    'xtS7EmX-6GX59Eujt'
   )
   .then((result) => {
     console.log('Email sent successfully:', result.text);
