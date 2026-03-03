@@ -108,12 +108,12 @@ const Footer: React.FC = () => {
                 style={{ color: 'rgba(253,250,246,0.55)', fontFamily: 'Montserrat, sans-serif' }}>
                 <Mail size={16} className="flex-shrink-0" style={{ color: C.gold }} />
                 <a
-                  href="mailto:releaseinnovationsltd@gmail.com"
+                  href="mailto:onyi@releaseinnovationsltd.com"
                   className="transition-colors"
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = C.goldLight; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'rgba(253,250,246,0.55)'; }}
                 >
-                  releaseinnovationsltd@gmail.com
+                  onyi@releaseinnovationsltd.com
                 </a>
               </li>
             </ul>

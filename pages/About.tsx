@@ -81,7 +81,7 @@ const About: React.FC = () => {
                 className="text-lg font-light leading-relaxed mb-6"
                 style={{ color: 'rgba(253,250,246,0.75)', fontFamily: 'Montserrat, sans-serif' }}
               >
-                As the founder of <strong style={{ color: C.ivory }}>Release Innovations Ltd</strong>,
+                As the founder of <strong style={{ color: C.ivory }}>Release Innovations </strong>,
                 and an entrepreneur since my teens, I’m all about growth. Every business has what I call its  <b>'Invincible Mechanics'</b>. Some call it 'Business Secret' I call it the foundation of scale.
               </p>
               <p

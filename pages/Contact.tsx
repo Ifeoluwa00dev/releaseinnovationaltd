@@ -205,7 +205,7 @@ Ready to make growth predictable? Book your strategy session now.
 
                 {/* Email */}
                 <a
-                  href="mailto:releaseinnovationsltd@gmail.com"
+                  href="mailto:onyi@releaseinnovationsltd.com"
                   className="flex items-start space-x-5 group"
                 >
                   <div
@@ -224,7 +224,7 @@ Ready to make growth predictable? Book your strategy session now.
                       Email
                     </h4>
                     <p className="text-sm" style={{ color: 'rgba(253,250,246,0.65)', fontFamily: 'Montserrat, sans-serif' }}>
-                      releaseinnovationsltd@gmail.com
+                      onyi@releaseinnovationsltd.com
                     </p>
                   </div>
                 </a>
