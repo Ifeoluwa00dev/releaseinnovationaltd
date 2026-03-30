@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 <Instagram size={18} style={{ color: C.ivory }} />
               </a>
               <a
-                href="https://linkedin.com/company/release-innovations"
+                href="https://linkedin.com/in/akudolu-onyinye"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

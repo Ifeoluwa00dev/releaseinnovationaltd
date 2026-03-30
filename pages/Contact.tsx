@@ -259,10 +259,11 @@ Ready to make growth predictable? Book your strategy session now.
                     </p>
                   </div>
                 </a>
+                
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/company/release-innovations"
+                  href="https://linkedin.com/in/akudolu-onyinye"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start space-x-5 group"
@@ -283,7 +284,7 @@ Ready to make growth predictable? Book your strategy session now.
                       LinkedIn
                     </h4>
                     <p className="text-sm" style={{ color: 'rgba(253,250,246,0.65)', fontFamily: 'Montserrat, sans-serif' }}>
-                      Release Innovations
+                      Akudolu Onyinye
                     </p>
                   </div>
                 </a>
